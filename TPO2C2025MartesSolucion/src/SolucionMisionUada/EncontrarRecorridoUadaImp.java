@@ -15,9 +15,9 @@ public class EncontrarRecorridoUadaImp implements EncontrarRecorridoUada {
     private static class VecinoConMovimiento {
         Estacion destino;
         Movimiento movimiento;
-        double tiempoBase;
+        float tiempoBase;
 
-        public VecinoConMovimiento(Estacion destino, Movimiento movimiento, double tiempoBase) {
+        public VecinoConMovimiento(Estacion destino, Movimiento movimiento, float tiempoBase) {
             this.destino = destino;
             this.movimiento = movimiento;
             this.tiempoBase = tiempoBase;
@@ -26,11 +26,11 @@ public class EncontrarRecorridoUadaImp implements EncontrarRecorridoUada {
 
     // Clase para almacenar la mejor solucion encontrada
     private static class SolucionOptima {
-        double tiempoTotal;
+        float tiempoTotal;
         ArrayList<Decision> camino;
 
         public SolucionOptima() {
-            this.tiempoTotal = Double.MAX_VALUE;
+            this.tiempoTotal = Float.MAX_VALUE;
             this.camino = new ArrayList<>();
         }
     }
@@ -62,8 +62,8 @@ public class EncontrarRecorridoUadaImp implements EncontrarRecorridoUada {
                 origen,
                 origen, // El objetivo es volver al origen (633)
                 obligatoriosPendientes,
-                (double) bateriaInicial,
-                0.0,
+                bateriaInicial,
+                0.0f,
                 mejor,
                 caminoActual,
                 desplazamientos,
@@ -80,8 +80,8 @@ public class EncontrarRecorridoUadaImp implements EncontrarRecorridoUada {
             Estacion actual,
             Estacion objetivo,
             HashSet<String> lugaresObligatoriosPend,
-            double bateria,
-            double tiempoAcumulado,
+            float bateria,
+            float tiempoAcumulado,
             SolucionOptima mejor,
             ArrayList<Decision> camino,
             ArrayList<Desplazamiento> desplazamientos,
@@ -94,17 +94,17 @@ public class EncontrarRecorridoUadaImp implements EncontrarRecorridoUada {
         for (VecinoConMovimiento vecinoActual : vecinos) {
             Estacion destino = vecinoActual.destino;
             Movimiento mov = vecinoActual.movimiento;
-            double tBase = vecinoActual.tiempoBase;
+            float tBase = vecinoActual.tiempoBase;
 
             // Copiar el conjunto de obligatorios para poder restaurarlo despues
             HashSet<String> obligatoriosInicial = copiarConjunto(lugaresObligatoriosPend);
 
             // Calcular tiempo y bateria usados
-            double[] costos = costoTiempoYBateria(mov, tBase);
-            double tUso = costos[0];
-            double bUso = costos[1];
-            double nuevaBateria = bateria - bUso;
-            double tiempoAcumNuevo = tiempoAcumulado + tUso;
+            float[] costos = costoTiempoYBateria(mov, tBase);
+            float tUso = costos[0];
+            float bUso = costos[1];
+            float nuevaBateria = bateria - bUso;
+            float tiempoAcumNuevo = tiempoAcumulado + tUso;
 
             // PODA 1: Bateria agotada en estacion no recargable (PRIMER IF del pseudocodigo)
             // si NO (nuevaBateria == 0 Y No actual.esAula Y destino.id <> objetivo.id entonces)
@@ -185,9 +185,9 @@ public class EncontrarRecorridoUadaImp implements EncontrarRecorridoUada {
      * Calcula la recarga de bateria en un aula
      * Complejidad: O(1)
      */
-    private double recargaAula(Estacion e, double bateria) {
-        double batCargada = bateria + (sumarDigitos(e.getIdentificadorNumerico()) / 5.0);
-        return Math.min(100.0, batCargada);
+    private float recargaAula(Estacion e, float bateria) {
+        float batCargada = bateria + (sumarDigitos(e.getIdentificadorNumerico()) / 5.0f);
+        return Math.min(100.0f, batCargada);
     }
 
     /**
@@ -196,22 +196,22 @@ public class EncontrarRecorridoUadaImp implements EncontrarRecorridoUada {
      *
      * @return array [tiempoUsado, bateriaUsada]
      */
-    private double[] costoTiempoYBateria(Movimiento mov, double tBase) {
-        double tMin = tBase / 60.0;
-        double tiempoUsado, bateriaUsada;
+    private float[] costoTiempoYBateria(Movimiento mov, float tBase) {
+        float tMin = tBase / 60.0f;
+        float tiempoUsado, bateriaUsada;
 
         switch (mov) {
             case CAMINAR:
                 tiempoUsado = tBase;
-                bateriaUsada = 1.0 * tMin;
+                bateriaUsada = 1.0f * tMin;
                 break;
             case SALTAR:
-                tiempoUsado = tBase / 2.0;
-                bateriaUsada = 2.2 * tMin; // 2.2x el consumo de caminar en mitad de tiempo
+                tiempoUsado = tBase / 2.0f;
+                bateriaUsada = 2.2f * tMin; // 2.2x el consumo de caminar en mitad de tiempo
                 break;
             case PATAS_ARRIBA:
-                tiempoUsado = 2.0 * tBase;
-                bateriaUsada = 0.45 * tMin; // 55% menos que caminar, en doble tiempo
+                tiempoUsado = 2.0f * tBase;
+                bateriaUsada = 0.45f * tMin; // 55% menos que caminar, en doble tiempo
                 break;
             default:
                 tiempoUsado = tBase;
@@ -219,7 +219,7 @@ public class EncontrarRecorridoUadaImp implements EncontrarRecorridoUada {
                 break;
         }
 
-        return new double[]{tiempoUsado, bateriaUsada};
+        return new float[]{tiempoUsado, bateriaUsada};
     }
 
     /**
@@ -275,16 +275,16 @@ public class EncontrarRecorridoUadaImp implements EncontrarRecorridoUada {
             Estacion origen,
             Estacion destino,
             Movimiento mov,
-            double tiempoAcumulado,
-            double bateriaRemanente) {
+            float tiempoAcumulado,
+            float bateriaRemanente) {
 
         //  Cast temporal a int - sacarlo cuando la libreria sea corregida
         Decision nuevaDecision = new Decision(
                 origen,
                 destino,
                 mov,
-                (int) bateriaRemanente,      // Cast temporal
-                (int) tiempoAcumulado        // Cast temporal
+                bateriaRemanente,      // Cast temporal
+                tiempoAcumulado        // Cast temporal
         );
         camino.add(nuevaDecision);
     }
