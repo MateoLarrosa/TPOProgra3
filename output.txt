@@ -1,0 +1,28 @@
+Decisión #1
+  Origen: Aula 633
+  Destino: Starbucks planta baja
+  Movimiento: SALTAR
+  Batería remanente: 100%
+  Tiempo acumulado: 7 segundos
+
+Decisión #2
+  Origen: Starbucks planta baja
+  Destino: Molinete Lima 3
+  Movimiento: SALTAR
+  Batería remanente: 99%
+  Tiempo acumulado: 17 segundos
+
+Decisión #3
+  Origen: Molinete Lima 3
+  Destino: Aula 613
+  Movimiento: SALTAR
+  Batería remanente: 98%
+  Tiempo acumulado: 26 segundos
+
+Decisión #4
+  Origen: Aula 613
+  Destino: Aula 633
+  Movimiento: SALTAR
+  Batería remanente: 100%
+  Tiempo acumulado: 31 segundos
+
