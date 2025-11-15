@@ -1,0 +1,58 @@
+════════════════════════════════════════════════════════════════════════════════
+CASO DE PRUEBA #1
+════════════════════════════════════════════════════════════════════════════════
+
+NOMBRE: Caso 1 - Simple
+DESCRIPCION: Recorrido corto. Consumo bajo de bateria
+BATERIA INICIAL: 100%
+
+LUGARES OBLIGATORIOS:
+  - Starbucks
+  - Molinete
+
+GRAFO:
+  Aula 633 -> Starbucks (15 seg)
+  Starbucks -> Molinete (20 seg)
+  Molinete -> Aula 613 (18 seg)
+  Aula 613 -> Aula 633 (10 seg)
+
+--------------------------------------------------------------------------------
+RESULTADO
+--------------------------------------------------------------------------------
+Tiempo de ejecucion: 2 ms
+
+✅ SOLUCION ENCONTRADA
+Decisiones: 4
+Tiempo total: 31 segundos
+Bateria final: 100%
+
+SECUENCIA DE DECISIONES:
+--------------------------------------------------------------------------------
+
+Decision #1:
+  Origen: Aula 633
+  Destino: Starbucks
+  Movimiento: SALTAR
+  Bateria remanente: 100%
+  Tiempo acumulado: 7 segundos
+
+Decision #2:
+  Origen: Starbucks
+  Destino: Molinete
+  Movimiento: SALTAR
+  Bateria remanente: 99%
+  Tiempo acumulado: 17 segundos
+
+Decision #3:
+  Origen: Molinete
+  Destino: Aula 613
+  Movimiento: SALTAR
+  Bateria remanente: 98%
+  Tiempo acumulado: 26 segundos
+
+Decision #4:
+  Origen: Aula 613
+  Destino: Aula 633
+  Movimiento: SALTAR
+  Bateria remanente: 100%
+  Tiempo acumulado: 31 segundos

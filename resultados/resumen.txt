@@ -1,0 +1,14 @@
+RESUMEN DE EJECUCION - TODOS LOS CASOS
+================================================================================
+
+Caso 1 - Simple                | ✅ 4 decisiones | 31 seg | Bat: 100% | 2 ms
+Caso 2 - Recorrido Medio       | ✅ 5 decisiones | 600 seg | Bat: 60% | 1 ms
+Caso 3 - Recorrido Largo       | ✅ 7 decisiones | 2370 seg | Bat: 39% | 0 ms
+Caso 4 - Recorrido Critico     | ✅ 6 decisiones | 3420 seg | Bat: 39% | 1 ms
+Caso 5 - Imposible             | ✅ 4 decisiones | 4920 seg | Bat: 21% | 0 ms
+
+================================================================================
+TOTAL DE CASOS: 5
+EXITOSOS: 5
+FALLIDOS: 0
+================================================================================

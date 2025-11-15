@@ -1,0 +1,66 @@
+════════════════════════════════════════════════════════════════════════════════
+CASO DE PRUEBA #2
+════════════════════════════════════════════════════════════════════════════════
+
+NOMBRE: Caso 2 - Bateria Limitada
+DESCRIPCION: Bateria justa (30%). Debe pasar por aulas para recargar
+BATERIA INICIAL: 30%
+
+LUGARES OBLIGATORIOS:
+  - Cafeteria
+  - Pasillo Norte
+
+GRAFO:
+  Aula 633 -> Pasillo Norte (180 seg)
+  Pasillo Norte -> Aula 721 (120 seg)
+  Aula 721 -> Cafeteria (150 seg)
+  Cafeteria -> Aula 918 (90 seg)
+  Aula 918 -> Aula 633 (60 seg)
+
+--------------------------------------------------------------------------------
+RESULTADO
+--------------------------------------------------------------------------------
+Tiempo de ejecucion: 0 ms
+
+✅ SOLUCION ENCONTRADA
+Decisiones: 5
+Tiempo total: 390 segundos
+Bateria final: 19%
+
+SECUENCIA DE DECISIONES:
+--------------------------------------------------------------------------------
+
+Decision #1:
+  Origen: Aula 633
+  Destino: Pasillo Norte
+  Movimiento: SALTAR
+  Bateria remanente: 25%
+  Tiempo acumulado: 90 segundos
+
+Decision #2:
+  Origen: Pasillo Norte
+  Destino: Aula 721
+  Movimiento: CAMINAR
+  Bateria remanente: 23%
+  Tiempo acumulado: 210 segundos
+
+Decision #3:
+  Origen: Aula 721
+  Destino: Cafeteria
+  Movimiento: SALTAR
+  Bateria remanente: 20%
+  Tiempo acumulado: 285 segundos
+
+Decision #4:
+  Origen: Cafeteria
+  Destino: Aula 918
+  Movimiento: SALTAR
+  Bateria remanente: 16%
+  Tiempo acumulado: 330 segundos
+
+Decision #5:
+  Origen: Aula 918
+  Destino: Aula 633
+  Movimiento: CAMINAR
+  Bateria remanente: 19%
+  Tiempo acumulado: 390 segundos
