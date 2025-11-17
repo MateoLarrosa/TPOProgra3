@@ -1,0 +1,122 @@
+═════════════════════════════════════════════════
+  DATASET MANUAL - 50 NODOS / 5 OBLIGATORIOS
+═════════════════════════════════════════════════
+
+Tiempo: 2380 ms
+
+✅ SOLUCION ENCONTRADA
+
+Decision 1:
+  Aula 633 -> Starbucks PB
+  Movimiento: SALTAR
+  Bateria: 100.0%
+  Tiempo: 30.0 seg
+
+Decision 2:
+  Starbucks PB -> Molinete L1
+  Movimiento: SALTAR
+  Bateria: 98.166664%
+  Tiempo: 55.0 seg
+
+Decision 3:
+  Molinete L1 -> Recepcion
+  Movimiento: SALTAR
+  Bateria: 96.51666%
+  Tiempo: 77.5 seg
+
+Decision 4:
+  Recepcion -> Aula 101
+  Movimiento: SALTAR
+  Bateria: 93.95%
+  Tiempo: 112.5 seg
+
+Decision 5:
+  Aula 101 -> Pasillo P1
+  Movimiento: SALTAR
+  Bateria: 92.88333%
+  Tiempo: 132.5 seg
+
+Decision 6:
+  Pasillo P1 -> Biblioteca P1
+  Movimiento: SALTAR
+  Bateria: 90.86666%
+  Tiempo: 160.0 seg
+
+Decision 7:
+  Biblioteca P1 -> Aula 201
+  Movimiento: SALTAR
+  Bateria: 88.48333%
+  Tiempo: 192.5 seg
+
+Decision 8:
+  Aula 201 -> Aula 301
+  Movimiento: SALTAR
+  Bateria: 85.783325%
+  Tiempo: 237.5 seg
+
+Decision 9:
+  Aula 301 -> Aula 310
+  Movimiento: SALTAR
+  Bateria: 85.299995%
+  Tiempo: 255.0 seg
+
+Decision 10:
+  Aula 310 -> Laboratorio P1
+  Movimiento: SALTAR
+  Bateria: 83.35%
+  Tiempo: 292.5 seg
+
+Decision 11:
+  Laboratorio P1 -> Aula 401
+  Movimiento: SALTAR
+  Bateria: 80.416664%
+  Tiempo: 332.5 seg
+
+Decision 12:
+  Aula 401 -> Aula 501
+  Movimiento: SALTAR
+  Bateria: 78.299995%
+  Tiempo: 375.0 seg
+
+Decision 13:
+  Aula 501 -> Sala Reunion 1
+  Movimiento: SALTAR
+  Bateria: 76.93333%
+  Tiempo: 410.0 seg
+
+Decision 14:
+  Sala Reunion 1 -> Aula 710
+  Movimiento: SALTAR
+  Bateria: 73.63332%
+  Tiempo: 455.0 seg
+
+Decision 15:
+  Aula 710 -> Gimnasio P7
+  Movimiento: SALTAR
+  Bateria: 72.84999%
+  Tiempo: 487.5 seg
+
+Decision 16:
+  Gimnasio P7 -> Aula 810
+  Movimiento: SALTAR
+  Bateria: 70.09999%
+  Tiempo: 525.0 seg
+
+Decision 17:
+  Aula 810 -> Aula 910
+  Movimiento: SALTAR
+  Bateria: 68.23333%
+  Tiempo: 575.0 seg
+
+Decision 18:
+  Aula 910 -> Terraza P9
+  Movimiento: SALTAR
+  Bateria: 67.11666%
+  Tiempo: 617.5 seg
+
+Decision 19:
+  Terraza P9 -> Aula 633
+  Movimiento: SALTAR
+  Bateria: 59.78333%
+  Tiempo: 717.5 seg
+
