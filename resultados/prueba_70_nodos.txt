@@ -4,15 +4,16 @@ PRUEBA EXHAUSTIVA - DATASET DE 70 NODOS
 
 CONFIGURACION:
   • Total de nodos: 70 (35 aulas + 35 lugares comunes)
-  • Lugares obligatorios: 4
+  • Lugares obligatorios: 5
   • Bateria inicial: 100%
-  • Tiempo de ejecucion: 57115 ms (57.115 seg)
+  • Tiempo de ejecucion: 393748 ms (393.748 seg)
 
 LUGARES OBLIGATORIOS:
   1. Aula 115
   2. Aula 301
   3. Aula 689
-  4. Aula 918
+  4. Molinete L3
+  5. Pasillo Norte Piso 2
 
 --------------------------------------------------------------------------------
 RESULTADO
@@ -20,10 +21,10 @@ RESULTADO
 ✅ SOLUCION ENCONTRADA
 
 ESTADISTICAS:
-  • Decisiones: 12
-  • Tiempo total recorrido: 912.5 segundos
-  • Bateria final: 58.483334%
-  • Bateria consumida: 41.516666%
+  • Decisiones: 17
+  • Tiempo total recorrido: 1065.0 segundos
+  • Bateria final: 40.69999%
+  • Bateria consumida: 59.30001%
 
 RECORRIDO COMPLETO:
 --------------------------------------------------------------------------------
@@ -44,70 +45,105 @@ Decision #2:
 
 Decision #3:
   Origen: Aula 689
-  Destino: Aula 918
+  Destino: Molinete L3
   Movimiento: SALTAR
   Bateria: 89,8%
   Tiempo acumulado: 277,5 seg
 
 Decision #4:
-  Origen: Aula 918
-  Destino: Aula 933
+  Origen: Molinete L3
+  Destino: Rustica Cafe
   Movimiento: SALTAR
-  Bateria: 89,8%
-  Tiempo acumulado: 327,5 seg
+  Bateria: 86,0%
+  Tiempo acumulado: 330,0 seg
 
 Decision #5:
-  Origen: Aula 933
-  Destino: Aula 101
+  Origen: Rustica Cafe
+  Destino: Pasillo Norte Piso 2
   Movimiento: SALTAR
-  Bateria: 75,2%
-  Tiempo acumulado: 567,5 seg
+  Bateria: 80,5%
+  Tiempo acumulado: 405,0 seg
 
 Decision #6:
+  Origen: Pasillo Norte Piso 2
+  Destino: Auditorio Piso 3
+  Movimiento: SALTAR
+  Bateria: 77,2%
+  Tiempo acumulado: 450,0 seg
+
+Decision #7:
+  Origen: Auditorio Piso 3
+  Destino: Laboratorio Piso 3
+  Movimiento: SALTAR
+  Bateria: 74,3%
+  Tiempo acumulado: 490,0 seg
+
+Decision #8:
+  Origen: Laboratorio Piso 3
+  Destino: Pasillo Norte Piso 7
+  Movimiento: SALTAR
+  Bateria: 68,8%
+  Tiempo acumulado: 565,0 seg
+
+Decision #9:
+  Origen: Pasillo Norte Piso 7
+  Destino: Gimnasio Piso 8
+  Movimiento: SALTAR
+  Bateria: 65,5%
+  Tiempo acumulado: 610,0 seg
+
+Decision #10:
+  Origen: Gimnasio Piso 8
+  Destino: Aula 101
+  Movimiento: SALTAR
+  Bateria: 57,4%
+  Tiempo acumulado: 720,0 seg
+
+Decision #11:
   Origen: Aula 101
   Destino: Aula 115
   Movimiento: SALTAR
-  Bateria: 72,3%
-  Tiempo acumulado: 612,5 seg
+  Bateria: 54,5%
+  Tiempo acumulado: 765,0 seg
 
-Decision #7:
+Decision #12:
   Origen: Aula 115
   Destino: Aula 210
   Movimiento: SALTAR
-  Bateria: 68,7%
-  Tiempo acumulado: 680,0 seg
+  Bateria: 50,9%
+  Tiempo acumulado: 832,5 seg
 
-Decision #8:
+Decision #13:
   Origen: Aula 210
   Destino: Aula 215
   Movimiento: SALTAR
-  Bateria: 66,4%
-  Tiempo acumulado: 720,0 seg
+  Bateria: 48,6%
+  Tiempo acumulado: 872,5 seg
 
-Decision #9:
+Decision #14:
   Origen: Aula 215
   Destino: Aula 301
   Movimiento: SALTAR
-  Bateria: 64,3%
-  Tiempo acumulado: 770,0 seg
+  Bateria: 46,5%
+  Tiempo acumulado: 922,5 seg
 
-Decision #10:
+Decision #15:
   Origen: Aula 301
   Destino: Aula 315
   Movimiento: SALTAR
-  Bateria: 61,3%
-  Tiempo acumulado: 822,5 seg
+  Bateria: 43,5%
+  Tiempo acumulado: 975,0 seg
 
-Decision #11:
+Decision #16:
   Origen: Aula 315
   Destino: Aula 613
   Movimiento: SALTAR
-  Bateria: 60,2%
-  Tiempo acumulado: 862,5 seg
+  Bateria: 42,4%
+  Tiempo acumulado: 1015,0 seg
 
-Decision #12:
+Decision #17:
   Origen: Aula 613
   Destino: Aula 633
   Movimiento: SALTAR
-  Bateria: 58,5%
-  Tiempo acumulado: 912,5 seg
+  Bateria: 40,7%
+  Tiempo acumulado: 1065,0 seg

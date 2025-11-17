@@ -43,9 +43,9 @@ public class DatasetGrande {
                 // Piso 7
                 710, 721, 745,
                 // Piso 8
-                815, 837, 862,
+                815//, 837, 862,
                 // Piso 9
-                918, 933, 955,
+                //918, 933, 955,
         };
 
         for (int num : numerosAulas) {
@@ -82,13 +82,13 @@ public class DatasetGrande {
                 "Starbucks Piso 8",
                 "Gimnasio Piso 8",
 
-                "Pasillo Norte Piso 9",
+               /* "Pasillo Norte Piso 9",
                 "Pasillo Sur Piso 9",
                 "Bibloteca piso 9",
 
                 // Otros
                 "Cafeteria Central",
-                "Biblioteca Principal",
+                "Biblioteca Principal",*/
                 "Secretaria Academica"
         };
 
