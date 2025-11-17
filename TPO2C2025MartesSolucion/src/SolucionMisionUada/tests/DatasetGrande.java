@@ -3,7 +3,13 @@ package SolucionMisionUada.tests;
 import MisionUada.Desplazamiento;
 import MisionUada.Estacion;
 import MisionUada.Movimiento;
+
+import java.io.IOException;
 import java.util.ArrayList;
+
+import java.io.File;
+import java.io.FileWriter;
+
 
 /**
  * Dataset FIJO de 50 nodos para pruebas exhaustivas
@@ -323,6 +329,9 @@ public class DatasetGrande {
             generarDataset();
         }
 
+        // >>> NUEVO: loguear dataset en nodos.txt <<<
+        //guardarNodosEnArchivo(todasLasEstaciones, todosLosDesplazamientos,obligatoriosReferencia);
+
         int aulas = 0;
         int noAulas = 0;
 
@@ -358,4 +367,65 @@ public class DatasetGrande {
         System.out.println("║ Estacion origen: " + obtenerOrigen().getNombre());
         System.out.println("╚════════════════════════════════════════════════════════╝");
     }
+
+    /**
+     * Guarda en un txt la info del dataset:
+     * - nombre de cada nodo
+     * - a qué nodos puede ir y con qué movimiento
+     */
+    public static void guardarNodosEnArchivo(ArrayList<Estacion> todasLasEstaciones,
+                                             ArrayList<Desplazamiento> todosLosDesplazamientos,
+                                             ArrayList<Estacion> obligatorios) {
+        File carpeta = new File("resultados");
+        if (!carpeta.exists()) {
+            carpeta.mkdir();
+        }
+
+        File archivo = new File(carpeta, "nodos.txt");
+
+        try (FileWriter writer = new FileWriter(archivo, true)) {
+
+            writer.write("=============================================\n");
+            writer.write("EJECUCION DATASET: DatasetGrande (50 nodos)\n");
+            writer.write("Total estaciones: " + todasLasEstaciones.size() + "\n");
+            writer.write("Total desplazamientos: " + todosLosDesplazamientos.size() + "\n");
+            writer.write("Total obligatorios: " + (obligatorios != null ? obligatorios.size() : 0) + "\n\n");
+
+            for (Estacion est : todasLasEstaciones) {
+
+                boolean esObligatorio = (obligatorios != null && obligatorios.contains(est));
+                String flagObligatorio = esObligatorio ? "OBLIGATORIO" : "NO OBLIGATORIO";
+
+                writer.write("Nodo: " + est.getNombre() + "  (" + flagObligatorio + ")\n");
+                writer.write("Desplazamientos desde este nodo:\n");
+
+                for (Desplazamiento d : todosLosDesplazamientos) {
+                    if (d.getOrigen().equals(est)) {
+                        writer.write("  -> " + d.getDestino().getNombre() + " [");
+
+                        ArrayList<Movimiento> movs = d.getMovimientosPermitidos();
+                        for (int i = 0; i < movs.size(); i++) {
+                            writer.write(movs.get(i).name());
+                            if (i < movs.size() - 1) {
+                                writer.write(", ");
+                            }
+                        }
+
+                        writer.write("] (tiempoBase=" + d.getTiempoBase() + ")\n");
+                    }
+                }
+
+                writer.write("\n");
+            }
+
+            writer.write("=============================================\n\n");
+
+        } catch (IOException e) {
+            System.err.println("Error al guardar archivo de nodos: " + e.getMessage());
+        }
+    }
+
+
+
+
 }

@@ -4,16 +4,15 @@ PRUEBA EXHAUSTIVA - DATASET DE 70 NODOS
 
 CONFIGURACION:
   • Total de nodos: 70 (35 aulas + 35 lugares comunes)
-  • Lugares obligatorios: 5
+  • Lugares obligatorios: 4
   • Bateria inicial: 100%
-  • Tiempo de ejecucion: 229544 ms (229.544 seg)
+  • Tiempo de ejecucion: 57115 ms (57.115 seg)
 
 LUGARES OBLIGATORIOS:
-  1. Aula 101
+  1. Aula 115
   2. Aula 301
-  3. Aula 745
-  4. Recepcion Principal
-  5. Sala de Reuniones Piso 6
+  3. Aula 689
+  4. Aula 918
 
 --------------------------------------------------------------------------------
 RESULTADO
@@ -21,10 +20,10 @@ RESULTADO
 ✅ SOLUCION ENCONTRADA
 
 ESTADISTICAS:
-  • Decisiones: 11
+  • Decisiones: 12
   • Tiempo total recorrido: 912.5 segundos
-  • Bateria final: 62.483326%
-  • Bateria consumida: 37.516674%
+  • Bateria final: 58.483334%
+  • Bateria consumida: 41.516666%
 
 RECORRIDO COMPLETO:
 --------------------------------------------------------------------------------
@@ -33,75 +32,82 @@ Decision #1:
   Origen: Aula 633
   Destino: Aula 655
   Movimiento: SALTAR
-  Bateria: 99,5%
-  Tiempo acumulado: 40,0 seg
+  Bateria: 98,0%
+  Tiempo acumulado: 60,0 seg
 
 Decision #2:
   Origen: Aula 655
-  Destino: Aula 745
+  Destino: Aula 689
   Movimiento: SALTAR
-  Bateria: 97,7%
-  Tiempo acumulado: 107,5 seg
+  Bateria: 96,1%
+  Tiempo acumulado: 130,0 seg
 
 Decision #3:
-  Origen: Aula 745
-  Destino: Recepcion Principal
-  Movimiento: CAMINAR
-  Bateria: 98,4%
-  Tiempo acumulado: 257,5 seg
+  Origen: Aula 689
+  Destino: Aula 918
+  Movimiento: SALTAR
+  Bateria: 89,8%
+  Tiempo acumulado: 277,5 seg
 
 Decision #4:
-  Origen: Recepcion Principal
-  Destino: Sala de Reuniones Piso 6
-  Movimiento: CAMINAR
-  Bateria: 95,9%
-  Tiempo acumulado: 407,5 seg
+  Origen: Aula 918
+  Destino: Aula 933
+  Movimiento: SALTAR
+  Bateria: 89,8%
+  Tiempo acumulado: 327,5 seg
 
 Decision #5:
-  Origen: Sala de Reuniones Piso 6
-  Destino: Terraza Piso 9
-  Movimiento: SALTAR
-  Bateria: 91,5%
-  Tiempo acumulado: 467,5 seg
-
-Decision #6:
-  Origen: Terraza Piso 9
-  Destino: Secretaria Academica
-  Movimiento: SALTAR
-  Bateria: 85,5%
-  Tiempo acumulado: 550,0 seg
-
-Decision #7:
-  Origen: Secretaria Academica
+  Origen: Aula 933
   Destino: Aula 101
   Movimiento: SALTAR
-  Bateria: 78,1%
-  Tiempo acumulado: 650,0 seg
+  Bateria: 75,2%
+  Tiempo acumulado: 567,5 seg
 
-Decision #8:
+Decision #6:
   Origen: Aula 101
+  Destino: Aula 115
+  Movimiento: SALTAR
+  Bateria: 72,3%
+  Tiempo acumulado: 612,5 seg
+
+Decision #7:
+  Origen: Aula 115
   Destino: Aula 210
   Movimiento: SALTAR
-  Bateria: 74,1%
-  Tiempo acumulado: 710,0 seg
+  Bateria: 68,7%
+  Tiempo acumulado: 680,0 seg
+
+Decision #8:
+  Origen: Aula 210
+  Destino: Aula 215
+  Movimiento: SALTAR
+  Bateria: 66,4%
+  Tiempo acumulado: 720,0 seg
 
 Decision #9:
-  Origen: Aula 210
+  Origen: Aula 215
   Destino: Aula 301
   Movimiento: SALTAR
-  Bateria: 71,4%
-  Tiempo acumulado: 755,0 seg
+  Bateria: 64,3%
+  Tiempo acumulado: 770,0 seg
 
 Decision #10:
   Origen: Aula 301
   Destino: Aula 315
   Movimiento: SALTAR
-  Bateria: 67,3%
+  Bateria: 61,3%
   Tiempo acumulado: 822,5 seg
 
 Decision #11:
   Origen: Aula 315
+  Destino: Aula 613
+  Movimiento: SALTAR
+  Bateria: 60,2%
+  Tiempo acumulado: 862,5 seg
+
+Decision #12:
+  Origen: Aula 613
   Destino: Aula 633
   Movimiento: SALTAR
-  Bateria: 62,5%
+  Bateria: 58,5%
   Tiempo acumulado: 912,5 seg

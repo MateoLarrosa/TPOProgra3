@@ -17,13 +17,16 @@ import java.util.ArrayList;
 public class EjecutorPruebaGrande {
 
     public static void main(String[] args) {
+        // Generar dataset primero para obtener el tamaño real
+        DatasetGrande.generarDataset();
+        int totalNodos = DatasetGrande.obtenerTodasLasEstaciones().size();
+
         System.out.println("╔══════════════════════════════════════════════════════════════╗");
-        System.out.println("║     PRUEBA EXHAUSTIVA - DATASET DE 70 NODOS                  ║");
+        System.out.println("║     PRUEBA EXHAUSTIVA - DATASET DE " + totalNodos + " NODOS                   ║");
         System.out.println("╚══════════════════════════════════════════════════════════════╝\n");
 
-        // Generar dataset
-        System.out.println("Generando dataset de 70 nodos...");
-        DatasetGrande.generarDataset();
+        // Mostrar estadísticas
+        System.out.println("Dataset generado:");
         DatasetGrande.imprimirEstadisticas();
         System.out.println();
 
@@ -36,7 +39,7 @@ public class EjecutorPruebaGrande {
         // CONFIGURACION DE LA PRUEBA (Modificar aqui)
         // ═══════════════════════════════════════════════════════════
 
-        int CANTIDAD_OBLIGATORIOS = 6;  // ← CAMBIAR AQUI para probar con distintas cantidades
+        int CANTIDAD_OBLIGATORIOS = 5;  // ← CAMBIAR AQUI para probar con distintas cantidades
         int BATERIA_INICIAL = 100;
 
         System.out.println("══════════════════════════════════════════════════════════════");
@@ -53,6 +56,12 @@ public class EjecutorPruebaGrande {
             System.out.println("  " + (i + 1) + ". " + obligatorios.get(i).getNombre());
         }
         System.out.println();
+
+        ArrayList<Estacion> todas = DatasetGrande.obtenerTodasLasEstaciones();
+        ArrayList<Desplazamiento> desplazamientosCopia = DatasetGrande.obtenerTodosLosDesplazamientos();
+
+        // Log completo del grafo + obligatorios
+        DatasetGrande.guardarNodosEnArchivo(todas, desplazamientosCopia, obligatorios);
 
         // ═══════════════════════════════════════════════════════════
         // EJECUTAR ALGORITMO
