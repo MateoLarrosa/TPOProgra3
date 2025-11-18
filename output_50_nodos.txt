@@ -1,7 +1,0 @@
-═════════════════════════════════════════════════
-  PRUEBA MANUAL - 50 NODOS / 10 OBLIGATORIOS
-═════════════════════════════════════════════════
-
-Tiempo de ejecucion: 139668 ms
-
-❌ NO SE ENCONTRO SOLUCION

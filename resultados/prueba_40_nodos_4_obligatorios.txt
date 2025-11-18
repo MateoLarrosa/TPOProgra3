@@ -1,40 +1,37 @@
-// Luego de ejecutarlo 15 minutos frenamos el programa ya que no devolvía solución.
-
----------------------------------------------------------------------------------------------
-
-??  CONEXIONES BIDIRECCIONALES AGREGADAS:
-??????????????????????????????????????????????????????????????
-  ? Aula 205 ? Aula 301
+  CONEXIONES BIDIRECCIONALES AGREGADAS:
+════════════════════════════════════════════════════════
+   Aula 205  Aula 301
     (Puedes volver de Aula 301 a Aula 205)
-  ? Aula 613 ? Aula 689
+   Aula 613  Aula 689
     (Puedes volver de Aula 689 a Aula 613)
-  ? Starbucks Planta Baja ? Molinete L3
+   Starbucks Planta Baja  Molinete L3
     (Puedes volver de Molinete L3 a Starbucks Planta Baja)
-??????????????????????????????????????????????????????????????
-Estas conexiones permitir�n testear la condici�n de poda:
+════════════════════════════════════════════════════════
+
+Estas conexiones permitieron testear la condición de poda:
 !visitadosCamino.contains(destino.getNombre())
 
-????????????????????????????????????????????????????????????????
-?     PRUEBA EXHAUSTIVA - DATASET DE 40 NODOS                   ?
-????????????????????????????????????????????????????????????????
+════════════════════════════════════════════════════════
+     PRUEBA EXHAUSTIVA - DATASET DE 40 NODOS                   
+════════════════════════════════════════════════════════
 
 Dataset generado:
-????????????????????????????????????????????????????????????
-?          ESTADISTICAS DEL DATASET                      ?
-????????????????????????????????????????????????????????????
-? Total de estaciones: 40
-? Aulas (recargables): 20
-? Lugares comunes: 20
-? Total desplazamientos: 123
-? Promedio vecinos por nodo: 3,08
-? Estacion origen: Aula 633
-????????????????????????????????????????????????????????????
+════════════════════════════════════════════════════════
+          ESTADISTICAS DEL DATASET                      
+════════════════════════════════════════════════════════
+ Total de estaciones: 40
+ Aulas (recargables): 20
+ Lugares comunes: 20
+ Total desplazamientos: 123
+ Promedio vecinos por nodo: 3,08
+ Estacion origen: Aula 633
+════════════════════════════════════════════════════════
 
-??????????????????????????????????????????????????????????????
+════════════════════════════════════════════════════════
 CONFIGURACION DE LA PRUEBA:
   � Cantidad de obligatorios: 4
   � Bateria inicial: 100%
-??????????????????????????????????????????????????????????????
+════════════════════════════════════════════════════════
 
 Lugares obligatorios seleccionados:
   1. Aula 115
@@ -42,15 +39,167 @@ Lugares obligatorios seleccionados:
   3. Aula 689
   4. Molinete L3
 
-????????????????????????????????????????????????????????????
-EJECUTANDO ALGORITMO DE BACKTRACKING... SIN PODA 2
-????????????????????????????????????????????????????????????
+════════════════════════════════════════════════════════
+EJECUTANDO ALGORITMO DE BACKTRACKING...
+════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════
+                    RESULTADO FINAL
+════════════════════════════════════════════════════════
+
+  TIEMPO DE EJECUCION: 35084 ms
+    (35.084 segundos)
+
+ SOLUCION ENCONTRADA
+════════════════════════════════════════════════════════
+
+ESTADISTICAS DE LA SOLUCION:
+  � Numero de decisiones (pasos): 12
+  � Tiempo total del recorrido: 912.5 segundos
+  � Bateria inicial: 100%
+  � Bateria final: 51.883327%
+  � Bateria consumida: 48.116673%
+  � Recargas realizadas: 10
+
+DISTRIBUCION DE MOVIMIENTOS:
+  � CAMINAR: 0 veces
+  � SALTAR: 12 veces
+  � PATAS_ARRIBA: 0 veces
+
+════════════════════════════════════════════════════════
+RECORRIDO COMPLETO (Resumen):
+════════════════════════════════════════════════════════
+   1. Aula 633 -> Aula 655 (SALTAR, bat: 98,0%)
+   2. Aula 655 -> Aula 689 (SALTAR, bat: 96,1%)
+   3. Aula 689 -> Molinete L3 (SALTAR, bat: 89,8%)
+   4. Molinete L3 -> Recepcion Principal (SALTAR, bat: 86,2%)
+   5. Recepcion Principal -> Aula 101 (SALTAR, bat: 68,6%)
+   6. Aula 101 -> Aula 115 (SALTAR, bat: 65,7%)
+   7. Aula 115 -> Aula 210 (SALTAR, bat: 62,1%)
+   8. Aula 210 -> Aula 215 (SALTAR, bat: 59,8%)
+   9. Aula 215 -> Aula 301 (SALTAR, bat: 57,7%)
+  10. Aula 301 -> Aula 315 (SALTAR, bat: 54,7%)
+  ... (2 pasos mas)
+  11. Aula 315 -> Aula 613 (SALTAR, bat: 53,5%)
+  12. Aula 613 -> Aula 633 (SALTAR, bat: 51,9%)
 
 
-----------------------------------------------
+════════════════════════════════════════════════════════════════════════════════
+PRUEBA EXHAUSTIVA - DATASET DE 40 NODOS
+════════════════════════════════════════════════════════════════════════════════
+
+CONFIGURACION:
+  • Total de nodos: 20 (20 aulas + 20 lugares comunes)
+  • Lugares obligatorios: 4
+  • Bateria inicial: 100%
+  • Tiempo de ejecucion: 35084 ms (35.084 seg)
+
+LUGARES OBLIGATORIOS:
+  1. Aula 115
+  2. Aula 301
+  3. Aula 689
+  4. Molinete L3
+
+════════════════════════════════════════════════════════
+RESULTADO
+════════════════════════════════════════════════════════
+✅ SOLUCION ENCONTRADA
+
+ESTADISTICAS:
+  • Decisiones: 12
+  • Tiempo total recorrido: 912.5 segundos
+  • Bateria final: 51.883327%
+  • Bateria consumida: 48.116673%
+
+RECORRIDO COMPLETO:
+════════════════════════════════════════════════════════
+
+Decision #1:
+  Origen: Aula 633
+  Destino: Aula 655
+  Movimiento: SALTAR
+  Bateria: 98,0%
+  Tiempo acumulado: 60,0 seg
+
+Decision #2:
+  Origen: Aula 655
+  Destino: Aula 689
+  Movimiento: SALTAR
+  Bateria: 96,1%
+  Tiempo acumulado: 130,0 seg
+
+Decision #3:
+  Origen: Aula 689
+  Destino: Molinete L3
+  Movimiento: SALTAR
+  Bateria: 89,8%
+  Tiempo acumulado: 277,5 seg
+
+Decision #4:
+  Origen: Molinete L3
+  Destino: Recepcion Principal
+  Movimiento: SALTAR
+  Bateria: 86,2%
+  Tiempo acumulado: 327,5 seg
+
+Decision #5:
+  Origen: Recepcion Principal
+  Destino: Aula 101
+  Movimiento: SALTAR
+  Bateria: 68,6%
+  Tiempo acumulado: 567,5 seg
+
+Decision #6:
+  Origen: Aula 101
+  Destino: Aula 115
+  Movimiento: SALTAR
+  Bateria: 65,7%
+  Tiempo acumulado: 612,5 seg
+
+Decision #7:
+  Origen: Aula 115
+  Destino: Aula 210
+  Movimiento: SALTAR
+  Bateria: 62,1%
+  Tiempo acumulado: 680,0 seg
+
+Decision #8:
+  Origen: Aula 210
+  Destino: Aula 215
+  Movimiento: SALTAR
+  Bateria: 59,8%
+  Tiempo acumulado: 720,0 seg
+
+Decision #9:
+  Origen: Aula 215
+  Destino: Aula 301
+  Movimiento: SALTAR
+  Bateria: 57,7%
+  Tiempo acumulado: 770,0 seg
+
+Decision #10:
+  Origen: Aula 301
+  Destino: Aula 315
+  Movimiento: SALTAR
+  Bateria: 54,7%
+  Tiempo acumulado: 822,5 seg
+
+Decision #11:
+  Origen: Aula 315
+  Destino: Aula 613
+  Movimiento: SALTAR
+  Bateria: 53,5%
+  Tiempo acumulado: 862,5 seg
+
+Decision #12:
+  Origen: Aula 613
+  Destino: Aula 633
+  Movimiento: SALTAR
+  Bateria: 51,9%
+  Tiempo acumulado: 912,5 seg
 
 =============================================
-EJECUCION DATASET: DatasetGrande (40 nodos)
+EJECUCION DATASET: DatasetGrande (40 nodos) con podas visitados
 Total estaciones: 40
 Total desplazamientos: 123
 Total obligatorios: 4

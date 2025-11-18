@@ -12,12 +12,10 @@ import java.io.FileWriter;
 
 
 /**
- * Dataset FIJO de 50 nodos para pruebas exhaustivas
- * - 25 aulas (recargables)
- * - 25 lugares comunes (no recargables)
- * - Grafo DETERMINISTICO (siempre el mismo)
- * - NO usa Random - 100% reproducible
- * - AHORA INCLUYE CONEXIONES BIDIRECCIONALES EN ALGUNOS NODOS PARA TESTEAR PODA DE VISITADOS
+ * Dataset FIJO de 40 nodos para pruebas exhaustivas
+ * - 20 aulas (recargables)
+ * - 20 lugares comunes (no recargables)
+ * - INCLUYE CONEXIONES BIDIRECCIONALES EN ALGUNOS NODOS PARA PROBAR PODA DE VISITADOS
  */
 public class DatasetGrande {
 
@@ -25,7 +23,7 @@ public class DatasetGrande {
     private static ArrayList<Desplazamiento> todosLosDesplazamientos;
 
     /**
-     * Genera el dataset completo de 50 nodos de forma DETERMINISTICA
+     * Genera el dataset completo de 40 nodos de forma DETERMINISTICA
      */
     public static void generarDataset() {
         todasLasEstaciones = new ArrayList<>();
@@ -83,13 +81,6 @@ public class DatasetGrande {
                 "Starbucks Piso 8",
                 "Gimnasio Piso 8",
 
-                /* "Pasillo Norte Piso 9",
-                 "Pasillo Sur Piso 9",
-                 "Bibloteca piso 9",
-
-                 // Otros
-                 "Cafeteria Central",
-                 "Biblioteca Principal",*/
                 "Secretaria Academica"
         };
 
@@ -103,11 +94,10 @@ public class DatasetGrande {
     }
 
     /**
-     * Genera desplazamientos entre estaciones de forma FIJA y DETERMINISTICA
-     * IMPORTANTE: Los desplazamientos de los nodos existentes NO cambian al agregar nuevos nodos
+     * Genera desplazamientos entre estaciones.
+     * Los desplazamientos de los nodos existentes no cambian al agregar nuevos nodos
      * Solo se crean desplazamientos para los nodos nuevos
-     *
-     * NUEVO: Ahora incluye 3 conexiones bidireccionales para testear poda de visitados
+     * incluye 3 conexiones bidireccionales para testear poda de visitados
      */
     private static void generarDesplazamientos() {
 
@@ -125,11 +115,11 @@ public class DatasetGrande {
 
         int n = todasLasEstaciones.size();
 
-        // ═══════════════════════════════════════════════════════════════════════
-        // PATRON FIJO: Cada nodo se conecta segun su POSICION ABSOLUTA
-        // Si el nodo i existe, sus conexiones son SIEMPRE las mismas
-        // independientemente de cuantos nodos haya en total
-        // ═══════════════════════════════════════════════════════════════════════
+        // =======================================================================
+        // Cada nodo se conecta segun su POSICION ABSOLUTA.
+        // Si el nodo i existe, sus conexiones van a ser SIEMPRE las mismas
+        // independientemente de cuantos nodos tengamos en total
+        // =======================================================================
 
         for (int i = 0; i < n; i++) {
             Estacion origen = todasLasEstaciones.get(i);
@@ -172,7 +162,7 @@ public class DatasetGrande {
         }
 
         // ═══════════════════════════════════════════════════════════════════════
-        // CERRAR EL CICLO: Conexiones de vuelta al origen
+        // CIERRE DEL CICLO: Conexiones de vuelta al origen
         // Estas tambien dependen solo de la posicion del nodo
         // ═══════════════════════════════════════════════════════════════════════
 
@@ -215,14 +205,14 @@ public class DatasetGrande {
             }
         }
 
-        // ═══════════════════════════════════════════════════════════════════════
-        // NUEVO: CONEXIONES BIDIRECCIONALES PARA TESTEAR PODA DE VISITADOS
-        // ═══════════════════════════════════════════════════════════════════════
+        // =======================================================================
+        // CONEXIONES BIDIRECCIONALES PARA TESTEAR PODA DE VISITADOS
+        // =======================================================================
 
-        System.out.println("\n⚠️  CONEXIONES BIDIRECCIONALES AGREGADAS:");
-        System.out.println("══════════════════════════════════════════════════════════════");
+        System.out.println("\n CONEXIONES BIDIRECCIONALES AGREGADAS:");
+        System.out.println("========================================");
 
-        // Caso 1: Conexión bidireccional entre índices 5 (Aula 205) y 8 (Aula 301)
+        // Conexión bidireccional entre índices 5 (Aula 205) y 8 (Aula 301)
         if (n > 8) {
             Estacion nodo5 = todasLasEstaciones.get(5);
             Estacion nodo8 = todasLasEstaciones.get(8);
@@ -232,11 +222,11 @@ public class DatasetGrande {
                     nodo8, nodo5, movimientosCaminosSaltos, 85
             ));
 
-            System.out.println("  ✓ " + nodo5.getNombre() + " ⇄ " + nodo8.getNombre());
-            System.out.println("    (Puedes volver de " + nodo8.getNombre() + " a " + nodo5.getNombre() + ")");
+            System.out.println("." + nodo5.getNombre() + " BIDIRECCIONAL CON " + nodo8.getNombre());
+            System.out.println("    (Se podra volver de " + nodo8.getNombre() + " a " + nodo5.getNombre() + ")");
         }
 
-        // Caso 2: Conexión bidireccional entre índices 12 (Aula 613) y 15 (Aula 689)
+        // Conexión bidireccional entre índices 12 (Aula 613) y 15 (Aula 689)
         if (n > 15) {
             Estacion nodo12 = todasLasEstaciones.get(12);
             Estacion nodo15 = todasLasEstaciones.get(15);
@@ -246,11 +236,11 @@ public class DatasetGrande {
                     nodo15, nodo12, movimientosTodos, 95
             ));
 
-            System.out.println("  ✓ " + nodo12.getNombre() + " ⇄ " + nodo15.getNombre());
-            System.out.println("    (Puedes volver de " + nodo15.getNombre() + " a " + nodo12.getNombre() + ")");
+            System.out.println("." + nodo12.getNombre() + "BIDIRECCIONAL CON" + nodo15.getNombre());
+            System.out.println("    (Se podra volver de " + nodo15.getNombre() + " a " + nodo12.getNombre() + ")");
         }
 
-        // Caso 3: Conexión bidireccional entre índices 20 (Starbucks PB) y 22 (Molinete L3)
+        // Conexión bidireccional entre índices 20 (Starbucks PB) y 22 (Molinete L3)
         if (n > 22) {
             Estacion nodo20 = todasLasEstaciones.get(20);
             Estacion nodo22 = todasLasEstaciones.get(22);
@@ -264,7 +254,7 @@ public class DatasetGrande {
             System.out.println("    (Puedes volver de " + nodo22.getNombre() + " a " + nodo20.getNombre() + ")");
         }
 
-        System.out.println("══════════════════════════════════════════════════════════════");
+        System.out.println("========================================================");
         System.out.println("Estas conexiones permitirán testear la condición de poda:");
         System.out.println("!visitadosCamino.contains(destino.getNombre())\n");
     }
@@ -283,7 +273,7 @@ public class DatasetGrande {
     }
 
     /**
-     * Obtiene todas las estaciones (50 nodos)
+     * retorna todas las estaciones (40 nodos)
      */
     public static ArrayList<Estacion> obtenerTodasLasEstaciones() {
         if (todasLasEstaciones == null) {
@@ -293,7 +283,7 @@ public class DatasetGrande {
     }
 
     /**
-     * Obtiene todos los desplazamientos
+     * retorna todos los desplazamientos
      */
     public static ArrayList<Desplazamiento> obtenerTodosLosDesplazamientos() {
         if (todosLosDesplazamientos == null) {
@@ -303,7 +293,7 @@ public class DatasetGrande {
     }
 
     /**
-     * Obtiene el Aula 633 como origen (siempre existe en el dataset)
+     * retorna el Aula 633 como origen (siempre va a existir en el dataset)
      */
     public static Estacion obtenerOrigen() {
         if (todasLasEstaciones == null) {
@@ -315,16 +305,13 @@ public class DatasetGrande {
                 return e;
             }
         }
-
-        // Fallback: retornar primera estacion
+        // si por algun motivo no existe, voy a devolver la primer estacion que tenga.
         return todasLasEstaciones.get(0);
     }
 
     /**
-     * Selecciona N lugares obligatorios de forma FIJA
-     * IMPORTANTE: Al aumentar cantidad, los anteriores se mantienen
-     * Ejemplo: Los primeros 5 obligatorios son siempre los mismos,
-     *          al pedir 8, agrega 3 mas sin cambiar los 5 originales
+     * Selecciona N lugares obligatorios de forma fija.
+     * Al aumentar cantidad, los anteriores se mantienen
      */
     public static ArrayList<Estacion> seleccionarObligatorios(int cantidad) {
         if (todasLasEstaciones == null) {
@@ -334,26 +321,24 @@ public class DatasetGrande {
         ArrayList<Estacion> obligatorios = new ArrayList<>();
         Estacion origen = obtenerOrigen();
 
-        // Definir posiciones FIJAS para obligatorios (orden de prioridad)
-        // Estos indices son fijos y siempre se toman en orden
+        // Definir posiciones FIJAS para nodos obligatorios
         int[] posicionesFijas = {
                 3, 8, 15, 22, 28, 35, 41, 47,  // Primeros 8 obligatorios
                 5, 12, 19, 26, 33, 39, 45,     // Siguientes 7 (total 15)
                 10, 17, 24, 31, 38, 43, 48     // Siguientes 7 (total 22)
-                // Agregar mas si necesitas mas de 22 obligatorios
+                // Si necesitamos mas de 22 obligatorios los vamos agregando aca abajo
         };
 
         int agregados = 0;
 
-        // Seleccionar en orden fijo
+        // Se seleccionan en orden fijo
         for (int i = 0; i < posicionesFijas.length && agregados < cantidad; i++) {
             int pos = posicionesFijas[i];
 
-            // Verificar que el indice existe
+            // Verifica que el indice existe
             if (pos < todasLasEstaciones.size()) {
                 Estacion candidata = todasLasEstaciones.get(pos);
 
-                // No agregar el origen
                 if (!candidata.getNombre().equals(origen.getNombre())) {
                     obligatorios.add(candidata);
                     agregados++;
@@ -362,7 +347,7 @@ public class DatasetGrande {
         }
 
         // Si no llegamos a la cantidad (porque el dataset es muy chico),
-        // agregar los que faltan desde el principio (saltando origen)
+        // agregamos los que faltan desde el principio (sin contar el origen)
         if (agregados < cantidad) {
             for (int i = 0; i < todasLasEstaciones.size() && agregados < cantidad; i++) {
                 Estacion candidata = todasLasEstaciones.get(i);
@@ -378,15 +363,12 @@ public class DatasetGrande {
     }
 
     /**
-     * Imprime estadisticas del dataset
+     * Imprimir estadisticas del dataset
      */
     public static void imprimirEstadisticas() {
         if (todasLasEstaciones == null) {
             generarDataset();
         }
-
-        // >>> NUEVO: loguear dataset en nodos.txt <<<
-        //guardarNodosEnArchivo(todasLasEstaciones, todosLosDesplazamientos,obligatoriosReferencia);
 
         int aulas = 0;
         int noAulas = 0;
@@ -412,20 +394,20 @@ public class DatasetGrande {
         }
         double promedioVecinos = (double) totalVecinos / todasLasEstaciones.size();
 
-        System.out.println("╔══════════════════════════════════════════════════════════╗");
-        System.out.println("║          ESTADISTICAS DEL DATASET                      ║");
-        System.out.println("╠══════════════════════════════════════════════════════════╣");
-        System.out.println("║ Total de estaciones: " + todasLasEstaciones.size());
-        System.out.println("║ Aulas (recargables): " + aulas);
-        System.out.println("║ Lugares comunes: " + noAulas);
-        System.out.println("║ Total desplazamientos: " + todosLosDesplazamientos.size());
+        System.out.println("==========================================================");
+        System.out.println("           ESTADISTICAS DEL DATASET                       ");
+        System.out.println("==========================================================");
+        System.out.println(" Total de estaciones: " + todasLasEstaciones.size());
+        System.out.println(" Aulas (recargables): " + aulas);
+        System.out.println(" Lugares comunes: " + noAulas);
+        System.out.println(" Total desplazamientos: " + todosLosDesplazamientos.size());
         System.out.println(String.format("║ Promedio vecinos por nodo: %.2f", promedioVecinos));
-        System.out.println("║ Estacion origen: " + obtenerOrigen().getNombre());
-        System.out.println("╚══════════════════════════════════════════════════════════╝");
+        System.out.println(" Estacion origen: " + obtenerOrigen().getNombre());
+        System.out.println("==========================================================");
     }
 
     /**
-     * Guarda en un txt la info del dataset:
+     * Guardar la info del dataset:
      * - nombre de cada nodo
      * - a qué nodos puede ir y con qué movimiento
      */
@@ -480,8 +462,4 @@ public class DatasetGrande {
             System.err.println("Error al guardar archivo de nodos: " + e.getMessage());
         }
     }
-
-
-
-
 }

@@ -108,7 +108,7 @@ public class EncontrarRecorridoUadaImp implements EncontrarRecorridoUada {
 
             // PODA 1: Bateria agotada en estacion no recargable (PRIMER IF del pseudocodigo)
             // si NO (nuevaBateria == 0 Y No actual.esAula Y destino.id <> objetivo.id entonces)
-            if (!(nuevaBateria == 0.0 && !actual.getEsAula() && !destino.getNombre().equals(objetivo.getNombre()))) {
+            if ( true ) {//!(nuevaBateria == 0.0 && !actual.getEsAula() && !destino.getNombre().equals(objetivo.getNombre()))) {
 
                 // PODAS 2, 3 y 4: Condiciones principales de validez del camino (SEGUNDO IF del pseudocodigo)
                 // PODA 2: tiempoAcumNuevo < mejor.tiempoTotal (peor tiempo)
@@ -118,7 +118,6 @@ public class EncontrarRecorridoUadaImp implements EncontrarRecorridoUada {
                 if (tiempoAcumNuevo < mejor.tiempoTotal &&
                         nuevaBateria >= 0.0 &&
                         (destino.getNombre().equals(objetivo.getNombre()) || !visitadosCamino.contains(destino.getNombre()))) {
-
                     // Si llegamos aca, es un camino valido para explorar
 
                     // Eliminar el actual de obligatorios si corresponde

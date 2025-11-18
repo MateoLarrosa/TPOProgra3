@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Ejecutor de pruebas con el dataset grande de 70 nodos
+ * Ejecutor de pruebas con el dataset grande de 40 nodos
  * Mide tiempos de ejecucion y genera reportes detallados
  */
 public class EjecutorPruebaGrande {
@@ -21,9 +21,9 @@ public class EjecutorPruebaGrande {
         DatasetGrande.generarDataset();
         int totalNodos = DatasetGrande.obtenerTodasLasEstaciones().size();
 
-        System.out.println("╔══════════════════════════════════════════════════════════════╗");
-        System.out.println("║     PRUEBA EXHAUSTIVA - DATASET DE " + totalNodos + " NODOS                   ║");
-        System.out.println("╚══════════════════════════════════════════════════════════════╝\n");
+        System.out.println("=============================================");
+        System.out.println("=     PRUEBA - DATASET DE " + totalNodos + " NODOS  =");
+        System.out.println("=============================================\n");
 
         // Mostrar estadísticas
         System.out.println("Dataset generado:");
@@ -35,18 +35,18 @@ public class EjecutorPruebaGrande {
         ArrayList<Estacion> todasEstaciones = DatasetGrande.obtenerTodasLasEstaciones();
         ArrayList<Desplazamiento> desplazamientos = DatasetGrande.obtenerTodosLosDesplazamientos();
 
-        // ═══════════════════════════════════════════════════════════
-        // CONFIGURACION DE LA PRUEBA (Modificar aqui)
-        // ═══════════════════════════════════════════════════════════
+        // =============================================
+        // CONFIGURACION DE LA PRUEBA
+        // =============================================
 
-        int CANTIDAD_OBLIGATORIOS = 6;  // ← CAMBIAR AQUI para probar con distintas cantidades
+        int CANTIDAD_OBLIGATORIOS = 7;  // <- Aca se debe cambiar el numero de obligatorios segun la prueba que se quiera realizar
         int BATERIA_INICIAL = 100;
 
-        System.out.println("══════════════════════════════════════════════════════════════");
+        System.out.println("=============================================");
         System.out.println("CONFIGURACION DE LA PRUEBA:");
         System.out.println("  • Cantidad de obligatorios: " + CANTIDAD_OBLIGATORIOS);
         System.out.println("  • Bateria inicial: " + BATERIA_INICIAL + "%");
-        System.out.println("══════════════════════════════════════════════════════════════\n");
+        System.out.println("=============================================\n");
 
         // Seleccionar obligatorios
         ArrayList<Estacion> obligatorios = DatasetGrande.seleccionarObligatorios(CANTIDAD_OBLIGATORIOS);
@@ -60,16 +60,16 @@ public class EjecutorPruebaGrande {
         ArrayList<Estacion> todas = DatasetGrande.obtenerTodasLasEstaciones();
         ArrayList<Desplazamiento> desplazamientosCopia = DatasetGrande.obtenerTodosLosDesplazamientos();
 
-        // Log completo del grafo + obligatorios
+        // Log completo del grafo y obligatorios
         DatasetGrande.guardarNodosEnArchivo(todas, desplazamientosCopia, obligatorios);
 
-        // ═══════════════════════════════════════════════════════════
+        // =============================================
         // EJECUTAR ALGORITMO
-        // ═══════════════════════════════════════════════════════════
+        // =============================================
 
-        System.out.println("════════════════════════════════════════════════════════════");
+        System.out.println("=============================================");
         System.out.println("EJECUTANDO ALGORITMO DE BACKTRACKING... ");
-        System.out.println("════════════════════════════════════════════════════════════");
+        System.out.println("=============================================");
 
         EncontrarRecorridoUadaImp algoritmo = new EncontrarRecorridoUadaImp();
 
@@ -87,19 +87,19 @@ public class EjecutorPruebaGrande {
         long tiempoFin = System.currentTimeMillis();
         long tiempoTotal = tiempoFin - tiempoInicio;
 
-        // ═══════════════════════════════════════════════════════════
+        // =============================================
         // MOSTRAR RESULTADOS
-        // ═══════════════════════════════════════════════════════════
+        // =============================================
 
-        System.out.println("\n════════════════════════════════════════════════════════════");
-        System.out.println("                    RESULTADO FINAL");
-        System.out.println("════════════════════════════════════════════════════════════");
+        System.out.println("\n===========================================");
+        System.out.println("              RESULTADO FINAL");
+        System.out.println("=============================================");
 
-        System.out.println("\n⏱️  TIEMPO DE EJECUCION: " + tiempoTotal + " ms");
+        System.out.println("\n  TIEMPO DE EJECUCION: " + tiempoTotal + " ms");
         System.out.println("    (" + (tiempoTotal / 1000.0) + " segundos)");
 
         if (solucion.isEmpty()) {
-            System.out.println("\n❌ NO SE ENCONTRO SOLUCION");
+            System.out.println("\n NO SE ENCONTRO SOLUCION");
             System.out.println("\nPosibles causas:");
             System.out.println("  • Bateria insuficiente para completar el recorrido");
             System.out.println("  • No existe camino que conecte todos los obligatorios");
@@ -107,8 +107,8 @@ public class EjecutorPruebaGrande {
         } else {
             Decision ultima = solucion.get(solucion.size() - 1);
 
-            System.out.println("\n✅ SOLUCION ENCONTRADA");
-            System.out.println("══════════════════════════════════════════════════════════");
+            System.out.println("\n SOLUCION ENCONTRADA");
+            System.out.println("=============================================");
             System.out.println("\nESTADISTICAS DE LA SOLUCION:");
             System.out.println("  • Numero de decisiones (pasos): " + solucion.size());
             System.out.println("  • Tiempo total del recorrido: " + ultima.getTiempoAcumulado() + " segundos");
@@ -125,7 +125,7 @@ public class EjecutorPruebaGrande {
             }
             System.out.println("  • Recargas realizadas: " + recargasRealizadas);
 
-            // Analizar movimientos usados
+            // Analizar los movimientos usados
             int caminar = 0, saltar = 0, patasArriba = 0;
             for (Decision d : solucion) {
                 switch (d.getMovimientoEmpleado()) {
@@ -141,9 +141,9 @@ public class EjecutorPruebaGrande {
             System.out.println("  • PATAS_ARRIBA: " + patasArriba + " veces");
 
             // Mostrar recorrido resumido
-            System.out.println("\n════════════════════════════════════════════════════════════");
+            System.out.println("\n=============================================");
             System.out.println("RECORRIDO COMPLETO (Resumen):");
-            System.out.println("════════════════════════════════════════════════════════════");
+            System.out.println("=============================================");
 
             for (int i = 0; i < Math.min(10, solucion.size()); i++) {
                 Decision d = solucion.get(i);
@@ -173,9 +173,9 @@ public class EjecutorPruebaGrande {
             }
         }
 
-        // ═══════════════════════════════════════════════════════════
+        // =============================================
         // GUARDAR RESULTADO EN ARCHIVO
-        // ═══════════════════════════════════════════════════════════
+        // =============================================
 
         guardarResultado(
                 CANTIDAD_OBLIGATORIOS,
@@ -185,9 +185,9 @@ public class EjecutorPruebaGrande {
                 tiempoTotal
         );
 
-        System.out.println("\n════════════════════════════════════════════════════════════");
-        System.out.println("✅ Resultado guardado en: resultados/prueba_70_nodos.txt");
-        System.out.println("════════════════════════════════════════════════════════════");
+        System.out.println("\n=============================================");
+        System.out.println("✅ Resultado guardado en: resultados/prueba_40_nodos_" + obligatorios.size() + "_obligatorios.txt");
+        System.out.println("=============================================");
     }
 
     /**
@@ -202,9 +202,9 @@ public class EjecutorPruebaGrande {
 
         StringBuilder contenido = new StringBuilder();
 
-        contenido.append("═".repeat(80)).append("\n");
+        contenido.append("=".repeat(80)).append("\n");
         contenido.append("PRUEBA EXHAUSTIVA - DATASET DE 40 NODOS\n");
-        contenido.append("═".repeat(80)).append("\n\n");
+        contenido.append("=".repeat(80)).append("\n\n");
 
         contenido.append("CONFIGURACION:\n");
         contenido.append("  • Total de nodos: 20 (20 aulas + 20 lugares comunes)\n");
@@ -225,10 +225,10 @@ public class EjecutorPruebaGrande {
         contenido.append("-".repeat(80)).append("\n");
 
         if (solucion.isEmpty()) {
-            contenido.append("❌ NO SE ENCONTRO SOLUCION\n");
+            contenido.append(" NO SE ENCONTRO SOLUCION\n");
         } else {
             Decision ultima = solucion.get(solucion.size() - 1);
-            contenido.append("✅ SOLUCION ENCONTRADA\n\n");
+            contenido.append(" SOLUCION ENCONTRADA\n\n");
             contenido.append("ESTADISTICAS:\n");
             contenido.append("  • Decisiones: ").append(solucion.size()).append("\n");
             contenido.append("  • Tiempo total recorrido: ").append(ultima.getTiempoAcumulado())
@@ -257,7 +257,7 @@ public class EjecutorPruebaGrande {
             carpeta.mkdir();
         }
 
-        try (FileWriter writer = new FileWriter("resultados/prueba_40_nodos_6_obligatorios_Con_3_desp_bidireccionales.txt")) { //_sin_poda_3
+        try (FileWriter writer = new FileWriter("resultados/prueba_405_nodos_" + obligatorios.size()  +"_obligatorios.txt")) {
             writer.write(contenido.toString());
         } catch (IOException e) {
             System.err.println("Error al guardar archivo: " + e.getMessage());
