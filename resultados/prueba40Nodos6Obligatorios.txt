@@ -1,24 +1,24 @@
-╔══════════════════════════════════════════════════════════════╗
-║     PRUEBA EXHAUSTIVA - DATASET DE 40 NODOS                   ║
-╚══════════════════════════════════════════════════════════════╝
+================================================================
+?     PRUEBA EXHAUSTIVA - DATASET DE 40 NODOS                   =
+================================================================
 
 Dataset generado:
-╔════════════════════════════════════════════════════════╗
-║          ESTADISTICAS DEL DATASET                      ║
-╠════════════════════════════════════════════════════════╣
-║ Total de estaciones: 40
-║ Aulas (recargables): 20
-║ Lugares comunes: 20
-║ Total desplazamientos: 120
-║ Promedio vecinos por nodo: 3,00
-║ Estacion origen: Aula 633
-╚════════════════════════════════════════════════════════╝
+================================================================
+?          ESTADISTICAS DEL DATASET                      ?
+================================================================
+? Total de estaciones: 40
+? Aulas (recargables): 20
+? Lugares comunes: 20
+? Total desplazamientos: 120
+? Promedio vecinos por nodo: 3,00
+? Estacion origen: Aula 633
+================================================================
 
-══════════════════════════════════════════════════════════════
+?================================================================
 CONFIGURACION DE LA PRUEBA:
-  • Cantidad de obligatorios: 5
-  • Bateria inicial: 100%
-══════════════════════════════════════════════════════════════
+  � Cantidad de obligatorios: 6
+  � Bateria inicial: 100%
+================================================================
 
 Lugares obligatorios seleccionados:
   1. Aula 115
@@ -26,37 +26,38 @@ Lugares obligatorios seleccionados:
   3. Aula 689
   4. Molinete L3
   5. Pasillo Norte Piso 2
+  6. Pasillo Norte Piso 7
 
-════════════════════════════════════════════════════════════
+================================================================
 EJECUTANDO ALGORITMO DE BACKTRACKING...
-════════════════════════════════════════════════════════════
+================================================================
 
-════════════════════════════════════════════════════════════
+================================================================
                     RESULTADO FINAL
-════════════════════════════════════════════════════════════
+================================================================
 
-⏱️  TIEMPO DE EJECUCION: 393748 ms
-    (393.748 segundos)
+??  TIEMPO DE EJECUCION: 424294 ms
+    (424.294 segundos)
 
-✅ SOLUCION ENCONTRADA
-══════════════════════════════════════════════════════════
+? SOLUCION ENCONTRADA
+================================================================
 
 ESTADISTICAS DE LA SOLUCION:
-  • Numero de decisiones (pasos): 17
-  • Tiempo total del recorrido: 1065.0 segundos
-  • Bateria inicial: 100%
-  • Bateria final: 40.69999%
-  • Bateria consumida: 59.30001%
-  • Recargas realizadas: 10
+  � Numero de decisiones (pasos): 17
+  � Tiempo total del recorrido: 1065.0 segundos
+  � Bateria inicial: 100%
+  � Bateria final: 40.69999%
+  � Bateria consumida: 59.30001%
+  � Recargas realizadas: 10
 
 DISTRIBUCION DE MOVIMIENTOS:
-  • CAMINAR: 0 veces
-  • SALTAR: 17 veces
-  • PATAS_ARRIBA: 0 veces
+  � CAMINAR: 0 veces
+  � SALTAR: 17 veces
+  � PATAS_ARRIBA: 0 veces
 
-════════════════════════════════════════════════════════════
+================================================================
 RECORRIDO COMPLETO (Resumen):
-════════════════════════════════════════════════════════════
+================================================================
    1. Aula 633 -> Aula 655 (SALTAR, bat: 98,0%)
    2. Aula 655 -> Aula 689 (SALTAR, bat: 96,1%)
    3. Aula 689 -> Molinete L3 (SALTAR, bat: 89,8%)
@@ -72,19 +73,21 @@ RECORRIDO COMPLETO (Resumen):
   16. Aula 315 -> Aula 613 (SALTAR, bat: 42,4%)
   17. Aula 613 -> Aula 633 (SALTAR, bat: 40,7%)
 
+================================================================
+? Resultado guardado en: resultados/prueba_70_nodos.txt
+================================================================
 
-
----------------------
+-----------------------------------------------------------------
 
 ════════════════════════════════════════════════════════════════════════════════
-PRUEBA EXHAUSTIVA - DATASET DE 70 NODOS
+PRUEBA EXHAUSTIVA - DATASET DE 40 NODOS
 ════════════════════════════════════════════════════════════════════════════════
 
 CONFIGURACION:
   • Total de nodos: 40 (20 aulas + 20 lugares comunes)
-  • Lugares obligatorios: 5
+  • Lugares obligatorios: 6
   • Bateria inicial: 100%
-  • Tiempo de ejecucion: 393748 ms (393.748 seg)
+  • Tiempo de ejecucion: 424294 ms (424.294 seg)
 
 LUGARES OBLIGATORIOS:
   1. Aula 115
@@ -92,6 +95,7 @@ LUGARES OBLIGATORIOS:
   3. Aula 689
   4. Molinete L3
   5. Pasillo Norte Piso 2
+  6. Pasillo Norte Piso 7
 
 --------------------------------------------------------------------------------
 RESULTADO
@@ -227,12 +231,15 @@ Decision #17:
   Tiempo acumulado: 1065,0 seg
 
 
------------------------------------------------
+-------------------------------------------------------------------
 
+=============================================
+
+=============================================
 EJECUCION DATASET: DatasetGrande (50 nodos)
 Total estaciones: 40
 Total desplazamientos: 120
-Total obligatorios: 5
+Total obligatorios: 6
 
 Nodo: Aula 101  (NO OBLIGATORIO)
 Desplazamientos desde este nodo:
@@ -449,7 +456,7 @@ Desplazamientos desde este nodo:
   -> Pasillo Norte Piso 7 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=140)
   -> Starbucks Piso 8 [CAMINAR, SALTAR] (tiempoBase=180)
 
-Nodo: Pasillo Norte Piso 7  (NO OBLIGATORIO)
+Nodo: Pasillo Norte Piso 7  (OBLIGATORIO)
 Desplazamientos desde este nodo:
   -> Pasillo Sur Piso 7 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=60)
   -> Gimnasio Piso 8 [CAMINAR, SALTAR] (tiempoBase=90)

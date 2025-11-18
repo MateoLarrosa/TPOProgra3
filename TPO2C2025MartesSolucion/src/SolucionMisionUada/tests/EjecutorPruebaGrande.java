@@ -39,7 +39,7 @@ public class EjecutorPruebaGrande {
         // CONFIGURACION DE LA PRUEBA (Modificar aqui)
         // ═══════════════════════════════════════════════════════════
 
-        int CANTIDAD_OBLIGATORIOS = 5;  // ← CAMBIAR AQUI para probar con distintas cantidades
+        int CANTIDAD_OBLIGATORIOS = 4;  // ← CAMBIAR AQUI para probar con distintas cantidades
         int BATERIA_INICIAL = 100;
 
         System.out.println("══════════════════════════════════════════════════════════════");

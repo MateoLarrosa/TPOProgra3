@@ -1,97 +1,93 @@
-╔══════════════════════════════════════════════════════════════╗
-║     PRUEBA EXHAUSTIVA - DATASET DE 40 NODOS                   ║
-╚══════════════════════════════════════════════════════════════╝
+????????????????????????????????????????????????????????????????
+?     PRUEBA EXHAUSTIVA - DATASET DE 40 NODOS                   ?
+????????????????????????????????????????????????????????????????
 
 Dataset generado:
-╔════════════════════════════════════════════════════════╗
-║          ESTADISTICAS DEL DATASET                      ║
-╠════════════════════════════════════════════════════════╣
-║ Total de estaciones: 40
-║ Aulas (recargables): 20
-║ Lugares comunes: 20
-║ Total desplazamientos: 120
-║ Promedio vecinos por nodo: 3,00
-║ Estacion origen: Aula 633
-╚════════════════════════════════════════════════════════╝
+??????????????????????????????????????????????????????????
+?          ESTADISTICAS DEL DATASET                      ?
+??????????????????????????????????????????????????????????
+? Total de estaciones: 40
+? Aulas (recargables): 20
+? Lugares comunes: 20
+? Total desplazamientos: 120
+? Promedio vecinos por nodo: 3,00
+? Estacion origen: Aula 633
+??????????????????????????????????????????????????????????
 
-══════════════════════════════════════════════════════════════
+??????????????????????????????????????????????????????????????
 CONFIGURACION DE LA PRUEBA:
-  • Cantidad de obligatorios: 5
-  • Bateria inicial: 100%
-══════════════════════════════════════════════════════════════
+  � Cantidad de obligatorios: 4
+  � Bateria inicial: 100%
+??????????????????????????????????????????????????????????????
 
 Lugares obligatorios seleccionados:
   1. Aula 115
   2. Aula 301
   3. Aula 689
   4. Molinete L3
-  5. Pasillo Norte Piso 2
 
-════════════════════════════════════════════════════════════
+????????????????????????????????????????????????????????????
 EJECUTANDO ALGORITMO DE BACKTRACKING...
-════════════════════════════════════════════════════════════
+????????????????????????????????????????????????????????????
 
-════════════════════════════════════════════════════════════
+????????????????????????????????????????????????????????????
                     RESULTADO FINAL
-════════════════════════════════════════════════════════════
+????????????????????????????????????????????????????????????
 
-⏱️  TIEMPO DE EJECUCION: 393748 ms
-    (393.748 segundos)
+??  TIEMPO DE EJECUCION: 27042 ms
+    (27.042 segundos)
 
-✅ SOLUCION ENCONTRADA
-══════════════════════════════════════════════════════════
+? SOLUCION ENCONTRADA
+??????????????????????????????????????????????????????????
 
 ESTADISTICAS DE LA SOLUCION:
-  • Numero de decisiones (pasos): 17
-  • Tiempo total del recorrido: 1065.0 segundos
-  • Bateria inicial: 100%
-  • Bateria final: 40.69999%
-  • Bateria consumida: 59.30001%
-  • Recargas realizadas: 10
+  � Numero de decisiones (pasos): 12
+  � Tiempo total del recorrido: 912.5 segundos
+  � Bateria inicial: 100%
+  � Bateria final: 51.883327%
+  � Bateria consumida: 48.116673%
+  � Recargas realizadas: 10
 
 DISTRIBUCION DE MOVIMIENTOS:
-  • CAMINAR: 0 veces
-  • SALTAR: 17 veces
-  • PATAS_ARRIBA: 0 veces
+  � CAMINAR: 0 veces
+  � SALTAR: 12 veces
+  � PATAS_ARRIBA: 0 veces
 
-════════════════════════════════════════════════════════════
+????????????????????????????????????????????????????????????
 RECORRIDO COMPLETO (Resumen):
-════════════════════════════════════════════════════════════
+????????????????????????????????????????????????????????????
    1. Aula 633 -> Aula 655 (SALTAR, bat: 98,0%)
    2. Aula 655 -> Aula 689 (SALTAR, bat: 96,1%)
    3. Aula 689 -> Molinete L3 (SALTAR, bat: 89,8%)
-   4. Molinete L3 -> Rustica Cafe (SALTAR, bat: 86,0%)
-   5. Rustica Cafe -> Pasillo Norte Piso 2 (SALTAR, bat: 80,5%)
-   6. Pasillo Norte Piso 2 -> Auditorio Piso 3 (SALTAR, bat: 77,2%)
-   7. Auditorio Piso 3 -> Laboratorio Piso 3 (SALTAR, bat: 74,3%)
-   8. Laboratorio Piso 3 -> Pasillo Norte Piso 7 (SALTAR, bat: 68,8%)
-   9. Pasillo Norte Piso 7 -> Gimnasio Piso 8 (SALTAR, bat: 65,5%)
-  10. Gimnasio Piso 8 -> Aula 101 (SALTAR, bat: 57,4%)
-  ... (7 pasos mas)
-  15. Aula 301 -> Aula 315 (SALTAR, bat: 43,5%)
-  16. Aula 315 -> Aula 613 (SALTAR, bat: 42,4%)
-  17. Aula 613 -> Aula 633 (SALTAR, bat: 40,7%)
+   4. Molinete L3 -> Recepcion Principal (SALTAR, bat: 86,2%)
+   5. Recepcion Principal -> Aula 101 (SALTAR, bat: 68,6%)
+   6. Aula 101 -> Aula 115 (SALTAR, bat: 65,7%)
+   7. Aula 115 -> Aula 210 (SALTAR, bat: 62,1%)
+   8. Aula 210 -> Aula 215 (SALTAR, bat: 59,8%)
+   9. Aula 215 -> Aula 301 (SALTAR, bat: 57,7%)
+  10. Aula 301 -> Aula 315 (SALTAR, bat: 54,7%)
+  ... (2 pasos mas)
+  11. Aula 315 -> Aula 613 (SALTAR, bat: 53,5%)
+  12. Aula 613 -> Aula 633 (SALTAR, bat: 51,9%)
 
 
-
----------------------
+--------------------------------------------------------------
 
 ════════════════════════════════════════════════════════════════════════════════
 PRUEBA EXHAUSTIVA - DATASET DE 70 NODOS
 ════════════════════════════════════════════════════════════════════════════════
 
 CONFIGURACION:
-  • Total de nodos: 40 (20 aulas + 20 lugares comunes)
-  • Lugares obligatorios: 5
+  • Total de nodos: 70 (35 aulas + 35 lugares comunes)
+  • Lugares obligatorios: 4
   • Bateria inicial: 100%
-  • Tiempo de ejecucion: 393748 ms (393.748 seg)
+  • Tiempo de ejecucion: 27042 ms (27.042 seg)
 
 LUGARES OBLIGATORIOS:
   1. Aula 115
   2. Aula 301
   3. Aula 689
   4. Molinete L3
-  5. Pasillo Norte Piso 2
 
 --------------------------------------------------------------------------------
 RESULTADO
@@ -99,10 +95,10 @@ RESULTADO
 ✅ SOLUCION ENCONTRADA
 
 ESTADISTICAS:
-  • Decisiones: 17
-  • Tiempo total recorrido: 1065.0 segundos
-  • Bateria final: 40.69999%
-  • Bateria consumida: 59.30001%
+  • Decisiones: 12
+  • Tiempo total recorrido: 912.5 segundos
+  • Bateria final: 51.883327%
+  • Bateria consumida: 48.116673%
 
 RECORRIDO COMPLETO:
 --------------------------------------------------------------------------------
@@ -130,109 +126,73 @@ Decision #3:
 
 Decision #4:
   Origen: Molinete L3
-  Destino: Rustica Cafe
+  Destino: Recepcion Principal
   Movimiento: SALTAR
-  Bateria: 86,0%
-  Tiempo acumulado: 330,0 seg
+  Bateria: 86,2%
+  Tiempo acumulado: 327,5 seg
 
 Decision #5:
-  Origen: Rustica Cafe
-  Destino: Pasillo Norte Piso 2
-  Movimiento: SALTAR
-  Bateria: 80,5%
-  Tiempo acumulado: 405,0 seg
-
-Decision #6:
-  Origen: Pasillo Norte Piso 2
-  Destino: Auditorio Piso 3
-  Movimiento: SALTAR
-  Bateria: 77,2%
-  Tiempo acumulado: 450,0 seg
-
-Decision #7:
-  Origen: Auditorio Piso 3
-  Destino: Laboratorio Piso 3
-  Movimiento: SALTAR
-  Bateria: 74,3%
-  Tiempo acumulado: 490,0 seg
-
-Decision #8:
-  Origen: Laboratorio Piso 3
-  Destino: Pasillo Norte Piso 7
-  Movimiento: SALTAR
-  Bateria: 68,8%
-  Tiempo acumulado: 565,0 seg
-
-Decision #9:
-  Origen: Pasillo Norte Piso 7
-  Destino: Gimnasio Piso 8
-  Movimiento: SALTAR
-  Bateria: 65,5%
-  Tiempo acumulado: 610,0 seg
-
-Decision #10:
-  Origen: Gimnasio Piso 8
+  Origen: Recepcion Principal
   Destino: Aula 101
   Movimiento: SALTAR
-  Bateria: 57,4%
-  Tiempo acumulado: 720,0 seg
+  Bateria: 68,6%
+  Tiempo acumulado: 567,5 seg
 
-Decision #11:
+Decision #6:
   Origen: Aula 101
   Destino: Aula 115
   Movimiento: SALTAR
-  Bateria: 54,5%
-  Tiempo acumulado: 765,0 seg
+  Bateria: 65,7%
+  Tiempo acumulado: 612,5 seg
 
-Decision #12:
+Decision #7:
   Origen: Aula 115
   Destino: Aula 210
   Movimiento: SALTAR
-  Bateria: 50,9%
-  Tiempo acumulado: 832,5 seg
+  Bateria: 62,1%
+  Tiempo acumulado: 680,0 seg
 
-Decision #13:
+Decision #8:
   Origen: Aula 210
   Destino: Aula 215
   Movimiento: SALTAR
-  Bateria: 48,6%
-  Tiempo acumulado: 872,5 seg
+  Bateria: 59,8%
+  Tiempo acumulado: 720,0 seg
 
-Decision #14:
+Decision #9:
   Origen: Aula 215
   Destino: Aula 301
   Movimiento: SALTAR
-  Bateria: 46,5%
-  Tiempo acumulado: 922,5 seg
+  Bateria: 57,7%
+  Tiempo acumulado: 770,0 seg
 
-Decision #15:
+Decision #10:
   Origen: Aula 301
   Destino: Aula 315
   Movimiento: SALTAR
-  Bateria: 43,5%
-  Tiempo acumulado: 975,0 seg
+  Bateria: 54,7%
+  Tiempo acumulado: 822,5 seg
 
-Decision #16:
+Decision #11:
   Origen: Aula 315
   Destino: Aula 613
   Movimiento: SALTAR
-  Bateria: 42,4%
-  Tiempo acumulado: 1015,0 seg
+  Bateria: 53,5%
+  Tiempo acumulado: 862,5 seg
 
-Decision #17:
+Decision #12:
   Origen: Aula 613
   Destino: Aula 633
   Movimiento: SALTAR
-  Bateria: 40,7%
-  Tiempo acumulado: 1065,0 seg
+  Bateria: 51,9%
+  Tiempo acumulado: 912,5 seg
 
 
------------------------------------------------
-
-EJECUCION DATASET: DatasetGrande (50 nodos)
+=============================================
+EJECUCION DATASET: DatasetGrande (40 nodos)
 Total estaciones: 40
 Total desplazamientos: 120
-Total obligatorios: 5
+Total obligatorios: 4
 
 Nodo: Aula 101  (NO OBLIGATORIO)
 Desplazamientos desde este nodo:
@@ -410,7 +370,7 @@ Desplazamientos desde este nodo:
   -> Pasillo Norte Piso 3 [CAMINAR, SALTAR] (tiempoBase=180)
   -> Starbucks Piso 8 [CAMINAR] (tiempoBase=360)
 
-Nodo: Pasillo Norte Piso 2  (OBLIGATORIO)
+Nodo: Pasillo Norte Piso 2  (NO OBLIGATORIO)
 Desplazamientos desde este nodo:
   -> Biblioteca Piso 2 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=120)
   -> Auditorio Piso 3 [CAMINAR, SALTAR] (tiempoBase=90)
