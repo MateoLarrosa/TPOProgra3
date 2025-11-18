@@ -39,7 +39,7 @@ public class EjecutorPruebaGrande {
         // CONFIGURACION DE LA PRUEBA (Modificar aqui)
         // ═══════════════════════════════════════════════════════════
 
-        int CANTIDAD_OBLIGATORIOS = 4;  // ← CAMBIAR AQUI para probar con distintas cantidades
+        int CANTIDAD_OBLIGATORIOS = 6;  // ← CAMBIAR AQUI para probar con distintas cantidades
         int BATERIA_INICIAL = 100;
 
         System.out.println("══════════════════════════════════════════════════════════════");
@@ -68,7 +68,7 @@ public class EjecutorPruebaGrande {
         // ═══════════════════════════════════════════════════════════
 
         System.out.println("════════════════════════════════════════════════════════════");
-        System.out.println("EJECUTANDO ALGORITMO DE BACKTRACKING...");
+        System.out.println("EJECUTANDO ALGORITMO DE BACKTRACKING... ");
         System.out.println("════════════════════════════════════════════════════════════");
 
         EncontrarRecorridoUadaImp algoritmo = new EncontrarRecorridoUadaImp();
@@ -203,11 +203,11 @@ public class EjecutorPruebaGrande {
         StringBuilder contenido = new StringBuilder();
 
         contenido.append("═".repeat(80)).append("\n");
-        contenido.append("PRUEBA EXHAUSTIVA - DATASET DE 70 NODOS\n");
+        contenido.append("PRUEBA EXHAUSTIVA - DATASET DE 40 NODOS\n");
         contenido.append("═".repeat(80)).append("\n\n");
 
         contenido.append("CONFIGURACION:\n");
-        contenido.append("  • Total de nodos: 70 (35 aulas + 35 lugares comunes)\n");
+        contenido.append("  • Total de nodos: 20 (20 aulas + 20 lugares comunes)\n");
         contenido.append("  • Lugares obligatorios: ").append(cantObligatorios).append("\n");
         contenido.append("  • Bateria inicial: ").append(bateriaInicial).append("%\n");
         contenido.append("  • Tiempo de ejecucion: ").append(tiempoMs).append(" ms (")
@@ -257,7 +257,7 @@ public class EjecutorPruebaGrande {
             carpeta.mkdir();
         }
 
-        try (FileWriter writer = new FileWriter("resultados/prueba_70_nodos.txt")) {
+        try (FileWriter writer = new FileWriter("resultados/prueba_40_nodos_6_obligatorios_Con_3_desp_bidireccionales.txt")) { //_sin_poda_3
             writer.write(contenido.toString());
         } catch (IOException e) {
             System.err.println("Error al guardar archivo: " + e.getMessage());
