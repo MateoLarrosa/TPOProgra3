@@ -401,7 +401,7 @@ public class DatasetGrande {
         System.out.println(" Aulas (recargables): " + aulas);
         System.out.println(" Lugares comunes: " + noAulas);
         System.out.println(" Total desplazamientos: " + todosLosDesplazamientos.size());
-        System.out.println(String.format("║ Promedio vecinos por nodo: %.2f", promedioVecinos));
+        System.out.println(String.format(" Promedio vecinos por nodo: %.2f", promedioVecinos));
         System.out.println(" Estacion origen: " + obtenerOrigen().getNombre());
         System.out.println("==========================================================");
     }

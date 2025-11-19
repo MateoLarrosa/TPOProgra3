@@ -39,7 +39,7 @@ public class EjecutorPruebaGrande {
         // CONFIGURACION DE LA PRUEBA
         // =============================================
 
-        int CANTIDAD_OBLIGATORIOS = 7;  // <- Aca se debe cambiar el numero de obligatorios segun la prueba que se quiera realizar
+        int CANTIDAD_OBLIGATORIOS = 4;  // <- Aca se debe cambiar el numero de obligatorios segun la prueba que se quiera realizar
         int BATERIA_INICIAL = 100;
 
         System.out.println("=============================================");
@@ -257,7 +257,7 @@ public class EjecutorPruebaGrande {
             carpeta.mkdir();
         }
 
-        try (FileWriter writer = new FileWriter("resultados/prueba_405_nodos_" + obligatorios.size()  +"_obligatorios.txt")) {
+        try (FileWriter writer = new FileWriter("resultados/prueba_40_nodos_" + obligatorios.size()  +"_obligatorios_v2.txt")) {
             writer.write(contenido.toString());
         } catch (IOException e) {
             System.err.println("Error al guardar archivo: " + e.getMessage());

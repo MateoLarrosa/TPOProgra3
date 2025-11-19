@@ -118,7 +118,7 @@ public class EncontrarRecorridoUadaImp implements EncontrarRecorridoUada {
                 if (tiempoAcumNuevo < mejor.tiempoTotal &&
                         nuevaBateria >= 0.0 &&
                         (destino.getNombre().equals(objetivo.getNombre()) || !visitadosCamino.contains(destino.getNombre()))) {
-                    // Si llegamos aca, es un camino valido para explorar
+                // Si llegamos aca, es un camino valido para explorar
 
                     // Eliminar el actual de obligatorios si corresponde
                     if (lugaresObligatoriosPend.contains(actual.getNombre())) {
