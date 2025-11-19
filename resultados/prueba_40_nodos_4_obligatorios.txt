@@ -1,0 +1,450 @@
+  CONEXIONES BIDIRECCIONALES AGREGADAS:
+════════════════════════════════════════════════════════
+   Aula 205  Aula 301
+    (Puedes volver de Aula 301 a Aula 205)
+   Aula 613  Aula 689
+    (Puedes volver de Aula 689 a Aula 613)
+   Starbucks Planta Baja  Molinete L3
+    (Puedes volver de Molinete L3 a Starbucks Planta Baja)
+════════════════════════════════════════════════════════
+
+Estas conexiones permitieron testear la condición de poda:
+!visitadosCamino.contains(destino.getNombre())
+
+════════════════════════════════════════════════════════
+     PRUEBA EXHAUSTIVA - DATASET DE 40 NODOS                   
+════════════════════════════════════════════════════════
+
+Dataset generado:
+════════════════════════════════════════════════════════
+          ESTADISTICAS DEL DATASET                      
+════════════════════════════════════════════════════════
+ Total de estaciones: 40
+ Aulas (recargables): 20
+ Lugares comunes: 20
+ Total desplazamientos: 123
+ Promedio vecinos por nodo: 3,08
+ Estacion origen: Aula 633
+════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════
+CONFIGURACION DE LA PRUEBA:
+  � Cantidad de obligatorios: 4
+  � Bateria inicial: 100%
+════════════════════════════════════════════════════════
+
+Lugares obligatorios seleccionados:
+  1. Aula 115
+  2. Aula 301
+  3. Aula 689
+  4. Molinete L3
+
+════════════════════════════════════════════════════════
+EJECUTANDO ALGORITMO DE BACKTRACKING...
+════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════
+                    RESULTADO FINAL
+════════════════════════════════════════════════════════
+
+  TIEMPO DE EJECUCION: 35084 ms
+    (35.084 segundos)
+
+ SOLUCION ENCONTRADA
+════════════════════════════════════════════════════════
+
+ESTADISTICAS DE LA SOLUCION:
+  � Numero de decisiones (pasos): 12
+  � Tiempo total del recorrido: 912.5 segundos
+  � Bateria inicial: 100%
+  � Bateria final: 51.883327%
+  � Bateria consumida: 48.116673%
+  � Recargas realizadas: 10
+
+DISTRIBUCION DE MOVIMIENTOS:
+  � CAMINAR: 0 veces
+  � SALTAR: 12 veces
+  � PATAS_ARRIBA: 0 veces
+
+════════════════════════════════════════════════════════
+RECORRIDO COMPLETO (Resumen):
+════════════════════════════════════════════════════════
+   1. Aula 633 -> Aula 655 (SALTAR, bat: 98,0%)
+   2. Aula 655 -> Aula 689 (SALTAR, bat: 96,1%)
+   3. Aula 689 -> Molinete L3 (SALTAR, bat: 89,8%)
+   4. Molinete L3 -> Recepcion Principal (SALTAR, bat: 86,2%)
+   5. Recepcion Principal -> Aula 101 (SALTAR, bat: 68,6%)
+   6. Aula 101 -> Aula 115 (SALTAR, bat: 65,7%)
+   7. Aula 115 -> Aula 210 (SALTAR, bat: 62,1%)
+   8. Aula 210 -> Aula 215 (SALTAR, bat: 59,8%)
+   9. Aula 215 -> Aula 301 (SALTAR, bat: 57,7%)
+  10. Aula 301 -> Aula 315 (SALTAR, bat: 54,7%)
+  ... (2 pasos mas)
+  11. Aula 315 -> Aula 613 (SALTAR, bat: 53,5%)
+  12. Aula 613 -> Aula 633 (SALTAR, bat: 51,9%)
+
+
+════════════════════════════════════════════════════════════════════════════════
+PRUEBA EXHAUSTIVA - DATASET DE 40 NODOS
+════════════════════════════════════════════════════════════════════════════════
+
+CONFIGURACION:
+  • Total de nodos: 20 (20 aulas + 20 lugares comunes)
+  • Lugares obligatorios: 4
+  • Bateria inicial: 100%
+  • Tiempo de ejecucion: 35084 ms (35.084 seg)
+
+LUGARES OBLIGATORIOS:
+  1. Aula 115
+  2. Aula 301
+  3. Aula 689
+  4. Molinete L3
+
+════════════════════════════════════════════════════════
+RESULTADO
+════════════════════════════════════════════════════════
+✅ SOLUCION ENCONTRADA
+
+ESTADISTICAS:
+  • Decisiones: 12
+  • Tiempo total recorrido: 912.5 segundos
+  • Bateria final: 51.883327%
+  • Bateria consumida: 48.116673%
+
+RECORRIDO COMPLETO:
+════════════════════════════════════════════════════════
+
+Decision #1:
+  Origen: Aula 633
+  Destino: Aula 655
+  Movimiento: SALTAR
+  Bateria: 98,0%
+  Tiempo acumulado: 60,0 seg
+
+Decision #2:
+  Origen: Aula 655
+  Destino: Aula 689
+  Movimiento: SALTAR
+  Bateria: 96,1%
+  Tiempo acumulado: 130,0 seg
+
+Decision #3:
+  Origen: Aula 689
+  Destino: Molinete L3
+  Movimiento: SALTAR
+  Bateria: 89,8%
+  Tiempo acumulado: 277,5 seg
+
+Decision #4:
+  Origen: Molinete L3
+  Destino: Recepcion Principal
+  Movimiento: SALTAR
+  Bateria: 86,2%
+  Tiempo acumulado: 327,5 seg
+
+Decision #5:
+  Origen: Recepcion Principal
+  Destino: Aula 101
+  Movimiento: SALTAR
+  Bateria: 68,6%
+  Tiempo acumulado: 567,5 seg
+
+Decision #6:
+  Origen: Aula 101
+  Destino: Aula 115
+  Movimiento: SALTAR
+  Bateria: 65,7%
+  Tiempo acumulado: 612,5 seg
+
+Decision #7:
+  Origen: Aula 115
+  Destino: Aula 210
+  Movimiento: SALTAR
+  Bateria: 62,1%
+  Tiempo acumulado: 680,0 seg
+
+Decision #8:
+  Origen: Aula 210
+  Destino: Aula 215
+  Movimiento: SALTAR
+  Bateria: 59,8%
+  Tiempo acumulado: 720,0 seg
+
+Decision #9:
+  Origen: Aula 215
+  Destino: Aula 301
+  Movimiento: SALTAR
+  Bateria: 57,7%
+  Tiempo acumulado: 770,0 seg
+
+Decision #10:
+  Origen: Aula 301
+  Destino: Aula 315
+  Movimiento: SALTAR
+  Bateria: 54,7%
+  Tiempo acumulado: 822,5 seg
+
+Decision #11:
+  Origen: Aula 315
+  Destino: Aula 613
+  Movimiento: SALTAR
+  Bateria: 53,5%
+  Tiempo acumulado: 862,5 seg
+
+Decision #12:
+  Origen: Aula 613
+  Destino: Aula 633
+  Movimiento: SALTAR
+  Bateria: 51,9%
+  Tiempo acumulado: 912,5 seg
+
+=============================================
+EJECUCION DATASET: DatasetGrande (40 nodos) con podas visitados
+Total estaciones: 40
+Total desplazamientos: 123
+Total obligatorios: 4
+
+Nodo: Aula 101  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 105 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=60)
+  -> Aula 115 [CAMINAR, SALTAR] (tiempoBase=90)
+  -> Aula 310 [CAMINAR] (tiempoBase=150)
+  -> Aula 215 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=120)
+
+Nodo: Aula 105  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 110 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=80)
+  -> Aula 201 [CAMINAR, SALTAR] (tiempoBase=105)
+  -> Aula 315 [CAMINAR] (tiempoBase=180)
+
+Nodo: Aula 110  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 115 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=100)
+  -> Aula 205 [CAMINAR, SALTAR] (tiempoBase=120)
+  -> Aula 613 [CAMINAR] (tiempoBase=210)
+
+Nodo: Aula 115  (OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 201 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=120)
+  -> Aula 210 [CAMINAR, SALTAR] (tiempoBase=135)
+  -> Aula 633 [CAMINAR] (tiempoBase=240)
+
+Nodo: Aula 201  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 205 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=140)
+  -> Aula 215 [CAMINAR, SALTAR] (tiempoBase=150)
+  -> Aula 655 [CAMINAR] (tiempoBase=270)
+
+Nodo: Aula 205  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 210 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=60)
+  -> Aula 301 [CAMINAR, SALTAR] (tiempoBase=165)
+  -> Aula 689 [CAMINAR] (tiempoBase=300)
+  -> Aula 613 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=245)
+
+Nodo: Aula 210  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 215 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=80)
+  -> Aula 305 [CAMINAR, SALTAR] (tiempoBase=180)
+  -> Aula 710 [CAMINAR] (tiempoBase=330)
+
+Nodo: Aula 215  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 301 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=100)
+  -> Aula 310 [CAMINAR, SALTAR] (tiempoBase=90)
+  -> Aula 721 [CAMINAR] (tiempoBase=360)
+
+Nodo: Aula 301  (OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 305 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=120)
+  -> Aula 315 [CAMINAR, SALTAR] (tiempoBase=105)
+  -> Aula 745 [CAMINAR] (tiempoBase=390)
+  -> Aula 205 [CAMINAR, SALTAR] (tiempoBase=85)
+
+Nodo: Aula 305  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 310 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=140)
+  -> Aula 613 [CAMINAR, SALTAR] (tiempoBase=120)
+  -> Aula 815 [CAMINAR] (tiempoBase=420)
+
+Nodo: Aula 310  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 315 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=60)
+  -> Aula 633 [CAMINAR, SALTAR] (tiempoBase=135)
+  -> Starbucks Planta Baja [CAMINAR] (tiempoBase=150)
+  -> Aula 721 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=170)
+
+Nodo: Aula 315  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 613 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=80)
+  -> Aula 655 [CAMINAR, SALTAR] (tiempoBase=150)
+  -> Molinete L1 [CAMINAR] (tiempoBase=180)
+
+Nodo: Aula 613  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 633 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=100)
+  -> Aula 689 [CAMINAR, SALTAR] (tiempoBase=165)
+  -> Molinete L3 [CAMINAR] (tiempoBase=210)
+
+Nodo: Aula 633  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 655 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=120)
+  -> Aula 710 [CAMINAR, SALTAR] (tiempoBase=180)
+  -> Recepcion Principal [CAMINAR] (tiempoBase=240)
+
+Nodo: Aula 655  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 689 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=140)
+  -> Aula 721 [CAMINAR, SALTAR] (tiempoBase=90)
+  -> Buffet Planta Baja [CAMINAR] (tiempoBase=270)
+
+Nodo: Aula 689  (OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 710 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=60)
+  -> Aula 745 [CAMINAR, SALTAR] (tiempoBase=105)
+  -> Rustica Cafe [CAMINAR] (tiempoBase=300)
+  -> Molinete L3 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=295)
+  -> Aula 613 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=95)
+
+Nodo: Aula 710  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 721 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=80)
+  -> Aula 815 [CAMINAR, SALTAR] (tiempoBase=120)
+  -> Pasillo Norte Piso 1 [CAMINAR] (tiempoBase=330)
+  -> Aula 101 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=410)
+
+Nodo: Aula 721  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 745 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=100)
+  -> Starbucks Planta Baja [CAMINAR, SALTAR] (tiempoBase=135)
+  -> Sala de profesores piso 1 [CAMINAR] (tiempoBase=360)
+
+Nodo: Aula 745  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 815 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=120)
+  -> Molinete L1 [CAMINAR, SALTAR] (tiempoBase=150)
+  -> Pasillo Norte Piso 2 [CAMINAR] (tiempoBase=390)
+
+Nodo: Aula 815  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Starbucks Planta Baja [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=140)
+  -> Molinete L3 [CAMINAR, SALTAR] (tiempoBase=165)
+  -> Biblioteca Piso 2 [CAMINAR] (tiempoBase=420)
+
+Nodo: Starbucks Planta Baja  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Molinete L1 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=60)
+  -> Recepcion Principal [CAMINAR, SALTAR] (tiempoBase=180)
+  -> Pasillo Norte Piso 3 [CAMINAR] (tiempoBase=150)
+  -> Sala de profesores piso 1 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=220)
+
+Nodo: Molinete L1  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Molinete L3 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=80)
+  -> Buffet Planta Baja [CAMINAR, SALTAR] (tiempoBase=90)
+  -> Auditorio Piso 3 [CAMINAR] (tiempoBase=180)
+
+Nodo: Molinete L3  (OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Recepcion Principal [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=100)
+  -> Rustica Cafe [CAMINAR, SALTAR] (tiempoBase=105)
+  -> Laboratorio Piso 3 [CAMINAR] (tiempoBase=210)
+  -> Starbucks Planta Baja [CAMINAR] (tiempoBase=75)
+
+Nodo: Recepcion Principal  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Buffet Planta Baja [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=120)
+  -> Pasillo Norte Piso 1 [CAMINAR, SALTAR] (tiempoBase=120)
+  -> Pasillo Norte Piso 6 [CAMINAR] (tiempoBase=240)
+  -> Aula 101 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=480)
+
+Nodo: Buffet Planta Baja  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Rustica Cafe [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=140)
+  -> Sala de profesores piso 1 [CAMINAR, SALTAR] (tiempoBase=135)
+  -> Pasillo Sur Piso 6 [CAMINAR] (tiempoBase=270)
+
+Nodo: Rustica Cafe  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Pasillo Norte Piso 1 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=60)
+  -> Pasillo Norte Piso 2 [CAMINAR, SALTAR] (tiempoBase=150)
+  -> Pasillo Norte Piso 7 [CAMINAR] (tiempoBase=300)
+  -> Laboratorio Piso 3 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=145)
+
+Nodo: Pasillo Norte Piso 1  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Sala de profesores piso 1 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=80)
+  -> Biblioteca Piso 2 [CAMINAR, SALTAR] (tiempoBase=165)
+  -> Pasillo Sur Piso 7 [CAMINAR] (tiempoBase=330)
+
+Nodo: Sala de profesores piso 1  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Pasillo Norte Piso 2 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=100)
+  -> Pasillo Norte Piso 3 [CAMINAR, SALTAR] (tiempoBase=180)
+  -> Starbucks Piso 8 [CAMINAR] (tiempoBase=360)
+
+Nodo: Pasillo Norte Piso 2  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Biblioteca Piso 2 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=120)
+  -> Auditorio Piso 3 [CAMINAR, SALTAR] (tiempoBase=90)
+  -> Gimnasio Piso 8 [CAMINAR] (tiempoBase=390)
+
+Nodo: Biblioteca Piso 2  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Pasillo Norte Piso 3 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=140)
+  -> Laboratorio Piso 3 [CAMINAR, SALTAR] (tiempoBase=105)
+  -> Secretaria Academica [CAMINAR] (tiempoBase=420)
+
+Nodo: Pasillo Norte Piso 3  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Auditorio Piso 3 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=60)
+  -> Pasillo Norte Piso 6 [CAMINAR, SALTAR] (tiempoBase=120)
+  -> Starbucks Piso 8 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=270)
+  -> Aula 101 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=550)
+
+Nodo: Auditorio Piso 3  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Laboratorio Piso 3 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=80)
+  -> Pasillo Sur Piso 6 [CAMINAR, SALTAR] (tiempoBase=135)
+
+Nodo: Laboratorio Piso 3  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Pasillo Norte Piso 6 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=100)
+  -> Pasillo Norte Piso 7 [CAMINAR, SALTAR] (tiempoBase=150)
+
+Nodo: Pasillo Norte Piso 6  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Pasillo Sur Piso 6 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=120)
+  -> Pasillo Sur Piso 7 [CAMINAR, SALTAR] (tiempoBase=165)
+
+Nodo: Pasillo Sur Piso 6  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Pasillo Norte Piso 7 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=140)
+  -> Starbucks Piso 8 [CAMINAR, SALTAR] (tiempoBase=180)
+
+Nodo: Pasillo Norte Piso 7  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Pasillo Sur Piso 7 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=60)
+  -> Gimnasio Piso 8 [CAMINAR, SALTAR] (tiempoBase=90)
+
+Nodo: Pasillo Sur Piso 7  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Starbucks Piso 8 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=80)
+  -> Secretaria Academica [CAMINAR, SALTAR] (tiempoBase=105)
+
+Nodo: Starbucks Piso 8  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Gimnasio Piso 8 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=100)
+  -> Aula 101 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=620)
+
+Nodo: Gimnasio Piso 8  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Secretaria Academica [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=120)
+  -> Aula 101 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=220)
+
+Nodo: Secretaria Academica  (NO OBLIGATORIO)
+Desplazamientos desde este nodo:
+  -> Aula 101 [CAMINAR, SALTAR, PATAS_ARRIBA] (tiempoBase=200)
+  -> Aula 105 [CAMINAR, SALTAR] (tiempoBase=180)
+
+=============================================

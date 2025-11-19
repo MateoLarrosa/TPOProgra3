@@ -137,8 +137,8 @@ public class PrincipalTest {
                             "  Origen: %s\n" +
                             "  Destino: %s\n" +
                             "  Movimiento: %s\n" +
-                            "  Batería remanente: %d%%\n" + // %.2f%% (cuando se cambie la libreria cambiar esto)
-                            "  Tiempo acumulado: %d segundos\n\n", // %.2f segundos (cuando se cambie la libreria cambiar esto)
+                            "  Batería remanente: %.2f%%\n" + //  (cuando se cambie la libreria cambiar esto) %d%%
+                            "  Tiempo acumulado: %.2f segundos\n\n", //   segundos (cuando se cambie la libreria cambiar esto)  %d
                     indice,
                     decision.getOrigen().getNombre(),
                     decision.getDestino().getNombre(),
